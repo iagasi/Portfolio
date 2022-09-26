@@ -1,0 +1,133 @@
+///////////////////////////////////////@at-root
+.range__buttons {
+  position: relative;
+}
+.progress-bar {
+    box-sizing: border-box;
+    display: flex;
+    padding-left: 37px;
+    padding-right: 37px;
+  top: 13px;
+  position: absolute;
+  width: 100%;
+  background: #404950;
+  height: 27px;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+  right: 0;
+  &__line {
+    width: 100%;
+    height: 2px;
+    left: 31px;
+    top: 512px;
+align-self: center;
+    background: #72828e;
+  }
+}
+.controls {
+    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  & label {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    padding: 6px;
+   
+
+    & div {
+      display: grid;
+      place-content: center;
+
+      & p {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #ffee2e;
+      }
+    }
+  }
+}
+
+//
+.range__buttons {
+  width: 100%;
+
+  & input {
+    display: none;
+  }
+}
+
+.prices {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.prices {
+  & h2 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+  }
+}
+
+#r1:checked ~ .controls #l1 {
+  @extend %activeRangeButton;
+}
+#r1:checked ~ .prices #p1 {
+  color: $rangeActiveColor !important;
+}
+
+#r2:checked ~ .controls #l2 {
+  @extend %activeRangeButton;
+}
+#r2:checked ~ .prices #p2 {
+  color: $rangeActiveColor !important;
+}
+
+#r3:checked ~ .controls #l3 {
+  @extend %activeRangeButton;
+}
+#r3:checked ~ .prices #p3 {
+  color: $rangeActiveColor !important;
+}
+#r4:checked ~ .controls #l4 {
+  @extend %activeRangeButton;
+}
+#r4:checked ~ .prices #p4 {
+  color: $rangeActiveColor !important;
+}
+#r5:checked ~ .controls #l5 {
+  @extend %activeRangeButton;
+}
+#r5:checked ~ .prices #p5 {
+  color: $rangeActiveColor !important;
+}
+#r6:checked ~ .controls #l6 {
+  @extend %activeRangeButton;
+}
+#r6:checked ~ .prices #p6 {
+  color: $rangeActiveColor !important;
+}
+#r7:checked ~ .controls #l7 {
+  @extend %activeRangeButton;
+}
+#r7:checked ~ .prices #p7 {
+  color: $rangeActiveColor !important;
+}
+#r8:checked ~ .controls #l8 {
+  @extend %activeRangeButton;
+}
+#r8:checked ~ .prices #p8 {
+  color: $rangeActiveColor !important;
+}

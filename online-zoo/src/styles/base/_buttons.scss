@@ -39,11 +39,19 @@ border-radius: 5px;
   line-height: 140%;
   width: 129px;
   height: 42px;
-  
-  color: #4B9200;
+  color: #1e1f1d;
   background: #F1F3F2;
-/* Green */
 
-border: 1px solid #4B9200;
+
+border: 1px solid #1b1b1a;
 border-radius: 5px;
+cursor: pointer;
+
+}
+
+.sumbmit-btn:hover{
+  color: #4B9200;
+  border: 1px solid #4B9200;
+  background: #F1F3F2;
+
 }

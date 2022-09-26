@@ -1,9 +1,14 @@
 .card {
+  position: relative;
+& img{
+z-index: 110;
+}
+ overflow: hidden;
   width: 366px;
-  //   height: 366px;
+  height: 426px;
   border: 1px solid $headerActiveLink;
   border-radius: 5px;
-  padding-bottom: 10px;
+
   cursor: pointer;
 
   &__bottom {
@@ -12,6 +17,7 @@
     padding: 5px 13px 0px 16px;
   }
   &__description {
+
     & h3 {
       font-weight: 500;
       font-size: 1.6em;
@@ -23,3 +29,42 @@
     }
   }
 }
+.card__bottom {
+  & img{
+    height: 38px;
+  }
+  height: 62px;
+  width: 92%;
+  position: absolute;
+  z-index: -1;
+  bottom: 60px;
+  display:flex ;
+  justify-content: space-between;
+ background-color: rgba($color: #726f6f, $alpha: 0.5)
+// background-color: white;
+ 
+}
+
+
+
+
+.card__img{
+  // width: 426px;
+  // height: 426px;
+}
+
+.card:hover {
+
+  & .card__img {
+    // opacity: 0.5;
+    // filter: alpha(opacity=40);
+    width: 376;
+    height: 376px;
+  
+  }
+  .card__bottom{
+    transition: 1s;
+    bottom: -15px;
+    }
+}
+

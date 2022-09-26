@@ -36,7 +36,7 @@
                         </div>
                         <ul class="nav">
                             <li class="nav__link link-active">
-                                <a class="" tabindex="0"> About</a>
+                                <a href="./index.html" class="" tabindex="0"> About</a>
 
                             </li>
                             <li class="nav__link">
@@ -46,7 +46,7 @@
                                 <a tabindex="1">Zoos</a>
                             </li>
                             <li class="nav__link">
-                                <a tabindex="1"> Donate</a>
+                                <a  href="./donate.html"tabindex="1"> Donate</a>
                             </li>
                             <li class="nav__link">
                                 <a tabindex="1">Contact us</a>
@@ -101,7 +101,7 @@
                         &rarr;
                     </button>
                     <div class="card">
-                        <img src="../img/desktop_petstory/animals/1.png" alt="">
+                        <img  class="card__img"src="../img/desktop_petstory/animals/1.png" alt="">
                         <div class="card__bottom">
                             <div class="card__description">
                                 <h3>GIANT PANDAS</h3>
@@ -113,7 +113,7 @@
 
                     </div>
                     <div class="card">
-                        <img src="../img/desktop_petstory/animals/2.png" alt="">
+                        <img class="card__img" src="../img/desktop_petstory/animals/2.png" alt="">
                         <div class="card__bottom">
                             <div class="card__description">
                                 <h3>EAGLES</h3>
@@ -125,7 +125,7 @@
 
                     </div>
                     <div class="card">
-                        <img src="../img/desktop_petstory/animals/3.png" alt="">
+                        <img class="card__img"src="../img/desktop_petstory/animals/3.png" alt="">
                         <div class="card__bottom">
                             <div class="card__description">
                                 <h3>GORILLAS</h3>
@@ -137,7 +137,7 @@
 
                     </div>
                     <div class="card">
-                        <img src="../img/desktop_petstory/animals/4.png" alt="">
+                        <img class="card__img"src="../img/desktop_petstory/animals/4.png" alt="">
                         <div class="card__bottom">
                             <div class="card__description">
                                 <h3>TWO-TOED-SLOTH</h3>
@@ -150,7 +150,7 @@
                     </div>
 
                     <div class="card">
-                        <img src="../img/desktop_petstory/animals/5.png" alt="">
+                        <img class="card__img"src="../img/desktop_petstory/animals/5.png" alt="">
                         <div class="card__bottom">
                             <div class="card__description">
                                 <h3>CHEETAHS</h3>
@@ -162,7 +162,7 @@
 
                     </div>
                     <div class="card">
-                        <img src="../img/desktop_petstory/animals/6.png" alt="">
+                        <img class="card__img" src="../img/desktop_petstory/animals/6.png" alt="">
                         <div class="card__bottom">
                             <div class="card__description">
                                 <h3>PENGUINS</h3>
@@ -404,10 +404,14 @@
                 <div class="footer__subscribtion">
                     <div class="subscription__top">
                         <h2 class="small-subtitle">Subscribe to our news</h2>
-                        <div class="subscription__items">
-                            <input class="email-input" placeholder="Enter your email">
-                            <button class="sumbmit-btn">Submit</button>
-                        </div>
+                        
+                        <form class="subscription__items">
+                            <input type="email" required class="email-input" placeholder="Enter your email" >
+                            <!-- <input type="text" name="firstname" id="firstname" required > -->
+
+                           
+                            <button class="sumbmit-btn" type="submit">Submit</button>
+                        </form>
 
                     </div>
 
@@ -427,6 +431,9 @@
 
         </div>
     </footer>
+    <div>
+
+    </div>
 </body>
 
 </html>

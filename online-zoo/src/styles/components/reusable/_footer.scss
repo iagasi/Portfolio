@@ -4,7 +4,6 @@
 
   &__col3 {
     display: flex;
-   
   }
   &__contacts {
     display: flex;
@@ -17,23 +16,18 @@
   &__nav {
     & a:hover {
       color: $mainBorderColor;
-        }
+    }
     display: flex;
     align-items: flex-end;
     margin-left: 40px;
-    ;
     & .nav {
       padding-bottom: 0;
-   
     }
   }
   &__subscribtion {
     display: grid;
     color: white;
-   padding-left: 30px;
-   & button{
-    margin-left: 5px;
-   }
+    padding-left: 30px;
   }
 }
 .social {
@@ -43,9 +37,6 @@
   gap: 10px;
 }
 .social__item {
-  &:hover{
-    color: $mainBorderColor;
-  }
   &-logo {
     width: 26px;
     height: 26px;
@@ -65,7 +56,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    
   }
 }
 
@@ -80,22 +70,41 @@
 
   align-self: flex-end;
   justify-self: flex-end;
+  cursor: pointer;
+}
+.desighned-by:active {
+  text-decoration: underline;
+  color: $linkActive;
 }
 
 .email-input {
   width: 220px;
   height: 35px;
-
+  background-color: inherit;
   color: #bdbdbd;
   border-radius: 2px;
   border: 2px solid orange;
 }
-.subscription__items{
-   padding-top: 16px; 
-   width: 100%;
+.subscription__items {
+  padding-top: 16px;
+  width: 100%;
 }
 
-.footer__contacts .logo :hover{
+.footer__contacts .logo :hover {
   color: $mainBorderColor;
+}
 
+//////hovers
+.social__item:hover {
+  color: $linkActive;
+  .social__item-logo {
+    background: $linkActive;
+  }
+}
+
+.social__item:active {
+  color: $linkActive;
+  .social__item-logo {
+    background: $linkActive;
+  }
 }
