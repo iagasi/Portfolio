@@ -8,17 +8,6 @@
  */
 (self["webpackChunkzoo"] = self["webpackChunkzoo"] || []).push([["main"],{
 
-/***/ "./src/styles/main.scss":
-/*!******************************!*\
-  !*** ./src/styles/main.scss ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://zoo/./src/styles/main.scss?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -26,7 +15,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\nconsole.log(\"Hello World!\");\n\n\n//# sourceURL=webpack://zoo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\nconsole.log(\"Hello World!\");\r\n\n\n//# sourceURL=webpack://zoo/./src/index.js?");
 
 /***/ }),
 
@@ -37,6 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ (() => {
 
 eval("\n\n//# sourceURL=webpack://zoo/./src/style.css?");
+
+/***/ }),
+
+/***/ "./src/styles/main.scss":
+/*!******************************!*\
+  !*** ./src/styles/main.scss ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://zoo/./src/styles/main.scss?");
 
 /***/ })
 
