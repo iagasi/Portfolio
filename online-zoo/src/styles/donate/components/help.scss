@@ -1,0 +1,104 @@
+.help {
+  background: linear-gradient(
+      315.75deg,
+      rgba(254, 210, 144, 0.7) 30.06%,
+      #febdab 100.95%,
+      rgba(254, 210, 144, 0.7) 106.36%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    ),
+    linear-gradient(
+      315.75deg,
+      rgba(254, 189, 171, 0.74) 30.06%,
+      rgba(243, 169, 248, 0.66) 50.74%,
+      #e0d8f0 80.49%,
+      #eaf7fe 127.9%,
+      #eaf7fe 149.54%
+    );
+  padding-top: 40px;
+  padding-bottom: 180px;
+}
+.help-top {
+  & h3,
+  p {
+    color: white;
+  }
+  & div {
+    color: $mainBorderColor;
+    text-align: left;
+    margin-top: 40px;
+  }
+}
+
+.help__feed {
+  height: 964px;
+  left: 220px;
+  right: 220px;
+  top: 804px;
+
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(2px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 20px;
+  padding: 40px 92px 62px;
+}
+.feed__top {
+  & p {
+    margin-top: 20px;
+  }
+}
+
+.options__top {
+  display: flex;
+  align-items: center;
+  padding-left: 215px;
+  padding-bottom: 48px;
+  & .panda {
+    padding-left: 64px;
+  }
+}
+
+.options__diet {
+  text-align: center;
+  padding-right: 11px;
+  & h2 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 80%;
+  }
+}
+
+.input__amount {
+  color: #929699;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #929699;
+
+  display: block;
+  width: 268px;
+
+  border: 1px solid #929699;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-between;
+padding: 16px 9px 16px 9px;
+
+  & input {
+    display: none;
+  }
+}
+
+.payment__options:active{
+color: blueviolet;
+}
