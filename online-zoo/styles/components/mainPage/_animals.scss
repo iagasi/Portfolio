@@ -1,0 +1,95 @@
+.animals {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 15px;
+  // display: none;
+  &__flower {
+    position: absolute;
+    top: 12px;
+    right: -13px;
+  }
+  &__palm {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &__strelitzia {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+  }
+  &-btn {
+    display: block;
+    margin: 84px auto;
+  }
+}
+.animals__top {
+  display: flex;
+  gap: 87px;
+  padding: 138px 0 175px 0px;
+  & img {
+    height: 403px;
+  }
+}
+.animals__cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}
+
+.animals__text {
+  & h2 {
+    font-weight: 400;
+    font-size: 4.8em;
+    line-height: 120%;
+  }
+  & h5 {
+    padding-top: 23px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #333b41;
+  }
+  & h3 {
+    padding-top: 54px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    /* identical to box height, or 29px */
+
+    color: #333b41;
+  }
+  & p {
+    padding-top: 34px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #333b41;
+  }
+}
+
+
+.animals__nav-btn{
+position: absolute;
+
+}
+
+.animals__nav-left{
+  top: 0;
+  bottom: 0;
+  margin: auto ;
+  left:-85px
+}
+
+.animals__nav-right{
+  top: 0;
+  bottom: 0;
+  margin: auto ;
+ right:-85px
+}

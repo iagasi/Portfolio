@@ -1,0 +1,76 @@
+.feed {
+  @extend %feedBackground;
+  padding: 70px 0 100px 0;
+
+  &__content {
+    background-color: $feedContentColor;
+    border-radius: 20px;
+    padding: 41px 0 59px 0;
+    text-align: center;
+
+    &-text {
+      padding: 0 0 0 99px;
+      text-align: left;
+    }
+  }
+  &-options {
+    padding-top: 60px;
+  }
+  &__small-subtitle {
+    padding-top: 33px;
+  }
+  &__description {
+    padding-top: 10px;
+    & span {
+      cursor: pointer;
+      border-bottom: 1px solid $mainBorderColor;
+    }
+  }
+  &__bold-description {
+    font-weight: 500;
+    padding-top: 40px;
+  }
+}
+
+.feed__cards {
+  padding: 38px 0 0 198px;
+  display: flex;
+  gap: 30px;
+  & :nth-child(1) {
+    & p {
+      padding-top: 0;
+      padding-bottom: 22px;
+    }
+  }
+}
+.feed__arrow-img {
+  margin-bottom: 70px;
+}
+.feed__card-item {
+  width: 168px;
+  height: 244px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & p {
+    line-height: 140%;
+    text-align: left;
+    padding-top: 22px;
+  }
+}
+
+.feed__card-img {
+  width: 168px;
+  height: 168px;
+  border-radius: 5px;
+  border: 1px solid $mainBorderColor;
+  background-color: white;
+
+  display: grid;
+  place-content: center;
+}
+
+.feed__submit-button {
+  margin-top: 60px;
+}

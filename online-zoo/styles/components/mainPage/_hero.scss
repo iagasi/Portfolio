@@ -1,0 +1,35 @@
+.hero {
+  position: relative;
+overflow: hidden;
+&__mainImg{
+   width: 100vw;
+}
+  &-btn{
+    margin:68px 25px;
+    float:right;
+    color: white;
+  }
+}
+
+.hero__content {
+  position: absolute;
+  top: 92px;
+  right: 280px;
+  z-index: 10;
+  width: 500.31px;
+
+}
+
+.hero__text {
+    position: absolute;
+    top: 75px;
+    left: 85px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 106.496px;
+  line-height: 75%;
+  color: white;
+
+  text-align: center;
+  text-transform: uppercase;
+}

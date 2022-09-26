@@ -1,0 +1,94 @@
+.testimonal {
+  padding: 140px 0 180px 0;
+  position: relative;
+
+  &-btn {
+    border-radius: 5px;
+    margin-top: 11px;
+  }
+
+  &__leaf{
+    position: absolute;
+    bottom: -134px;
+    right: -8px;
+  }
+}
+
+.card-item {
+  &__owner {
+    display: flex;
+  }
+  &__img {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    /* or 18px */
+
+    /* gray */
+
+    color: #767474;
+  }
+}
+
+.testimomal__cards {
+  margin-top: 47px;
+  display: flex;
+  gap: 30px;
+}
+
+.card-item {
+  box-sizing: border-box;
+  width: 268px;
+  height: 391px;
+  overflow: hidden;
+  border: 2px solid rgba(254, 189, 171, 0.74);
+
+  padding: 15px 14px 19px 16px;
+
+  background: #f1f3f2;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &__owner {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.card-item__user {
+  &-name {
+    line-height: 120%;
+  }
+  &-location {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+
+    color: #bdbdbd;
+  }
+}
+
+.scroll {
+  margin: 21px auto;
+  width: 599px;
+  height: 8px;
+  background: #f5f7f6;
+  border-radius: 5px;
+  border: 1px solid rgba(254, 189, 171, 0.74);
+  display: flex;
+  place-items: center;
+  &__item {
+    width: 115.19px;
+    height: 6px;
+
+    background: #fe9013;
+    border-radius: 5px;
+  }
+}

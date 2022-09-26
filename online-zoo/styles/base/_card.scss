@@ -1,0 +1,25 @@
+.card {
+  width: 366px;
+  //   height: 366px;
+  border: 1px solid $headerActiveLink;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  cursor: pointer;
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 13px 0px 16px;
+  }
+  &__description {
+    & h3 {
+      font-weight: 500;
+      font-size: 1.6em;
+      line-height: 140%;
+    }
+    & p {
+      font-weight: 300;
+      font-size: 1.5em;
+    }
+  }
+}
