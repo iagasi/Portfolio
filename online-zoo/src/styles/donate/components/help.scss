@@ -21,23 +21,26 @@
       #eaf7fe 127.9%,
       #eaf7fe 149.54%
     );
-  padding-top: 40px;
+  margin-top: -5px;
+  padding-top: 31px;
   padding-bottom: 180px;
 }
 .help-top {
   & h3,
   p {
+    margin-top: 11px;
     color: white;
   }
   & div {
     color: $mainBorderColor;
     text-align: left;
-    margin-top: 40px;
+    padding-top: 47px;
+    padding-bottom: 63px;
   }
 }
 
 .help__feed {
-  height: 964px;
+ 
   left: 220px;
   right: 220px;
   top: 804px;
@@ -48,6 +51,10 @@
 
   border-radius: 20px;
   padding: 40px 92px 62px;
+  & button {
+    display: block;
+    margin: 0 auto;
+  }
 }
 .feed__top {
   & p {
@@ -60,15 +67,21 @@
   align-items: center;
   padding-left: 215px;
   padding-bottom: 48px;
+  padding-top: 62px;
   & .panda {
     padding-left: 64px;
+  }
+  & .imgx {
+    margin-top: 15px;
   }
 }
 
 .options__diet {
   text-align: center;
   padding-right: 11px;
+  padding-top: 39px;
   & h2 {
+    padding-top: 10px;
     font-style: normal;
     font-weight: 500;
     font-size: 72px;
@@ -77,28 +90,76 @@
 }
 
 .input__amount {
-  color: #929699;
+  // padding-top: 62px;
+  // padding-bottom: 26px;
 
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  color: #929699;
-
-  display: block;
-  width: 268px;
-
-  border: 1px solid #929699;
-  border-radius: 2px;
-  display: flex;
-  justify-content: space-between;
-padding: 16px 9px 16px 9px;
-
+  margin: 53px auto 0 auto;
+  width: fit-content;
+  position: relative;
   & input {
-    display: none;
+    box-sizing: border-box;
+    color: #929699;
+
+    display: block;
+    width: 268px;
+
+
+
+    padding: 16px 7px 16px 7px;
+  }
+& input:focus~  #input-dollar {
+
+    color: $linkActive;
+  
+
+}
+  & #input-dollar {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    bottom: 0;
+    margin: auto;
+    
   }
 }
 
-.payment__options:active{
-color: blueviolet;
+.payment__options {
+  display: flex;
+box-sizing: border-box;
+  gap: 50px;
+  padding: 23px 56px 34px 0;
+
+  width: fit-content;
+  margin: 0 auto;
+  & input {
+    display: none;
+  }
+  & label {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.radio-round {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #fe9013;
+  & p {
+  }
+}
+
+#radio1:checked ~ #label1 div {
+  background-color: $rangeActiveColor;
+}
+
+#radio2:checked ~ #label2 div {
+  background-color: $rangeActiveColor;
+}
+
+.help-bottom__text {
+  padding-top: 30px;
+
+  text-align: center;
 }

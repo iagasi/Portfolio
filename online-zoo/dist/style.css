@@ -347,7 +347,7 @@ button:active {
 .animals {
   overflow: hidden;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 23px;
 }
 .animals__flower {
   position: absolute;
@@ -366,13 +366,13 @@ button:active {
 }
 .animals-btn {
   display: block;
-  margin: 84px auto;
+  margin: 77px auto;
 }
 
 .animals__top {
   display: flex;
   gap: 87px;
-  padding: 138px 0 175px 0px;
+  padding: 148px 0 175px 0px;
 }
 .animals__top img {
   height: 403px;
@@ -546,14 +546,17 @@ button:active {
 }
 
 .card-item {
+  cursor: pointer;
+  background: linear-gradient(#f1f3f2, #f1f3f2) padding-box, linear-gradient(90deg, rgba(254, 189, 171, 0.74), rgba(243, 169, 248, 0.66)) border-box;
   box-sizing: border-box;
   width: 268px;
   height: 391px;
   overflow: hidden;
-  border: 2px solid rgba(254, 189, 171, 0.74);
-  padding: 15px 14px 19px 16px;
-  background: #f1f3f2;
   border-radius: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  padding: 15px 14px 19px 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -575,6 +578,7 @@ button:active {
 }
 
 .scroll {
+  cursor: pointer;
   margin: 21px auto;
   width: 599px;
   height: 8px;
@@ -589,6 +593,9 @@ button:active {
   height: 6px;
   background: #fe9013;
   border-radius: 5px;
+}
+.scroll:hover .scroll__item {
+  background-color: #f9804b;
 }
 
 .footer {
@@ -703,24 +710,30 @@ button:active {
   position: static;
 }
 
+.hero__mainImg {
+  max-width: 100%;
+}
+
 .help {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
-  padding-top: 40px;
+  margin-top: -5px;
+  padding-top: 31px;
   padding-bottom: 180px;
 }
 
 .help-top h3,
 .help-top p {
+  margin-top: 11px;
   color: white;
 }
 .help-top div {
   color: #fe9013;
   text-align: left;
-  margin-top: 40px;
+  padding-top: 47px;
+  padding-bottom: 63px;
 }
 
 .help__feed {
-  height: 964px;
   left: 220px;
   right: 220px;
   top: 804px;
@@ -729,6 +742,10 @@ button:active {
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 20px;
   padding: 40px 92px 62px;
+}
+.help__feed button {
+  display: block;
+  margin: 0 auto;
 }
 
 .feed__top p {
@@ -740,16 +757,22 @@ button:active {
   align-items: center;
   padding-left: 215px;
   padding-bottom: 48px;
+  padding-top: 62px;
 }
 .options__top .panda {
   padding-left: 64px;
+}
+.options__top .imgx {
+  margin-top: 15px;
 }
 
 .options__diet {
   text-align: center;
   padding-right: 11px;
+  padding-top: 39px;
 }
 .options__diet h2 {
+  padding-top: 10px;
   font-style: normal;
   font-weight: 500;
   font-size: 72px;
@@ -757,26 +780,62 @@ button:active {
 }
 
 .input__amount {
-  color: #929699;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
+  margin: 53px auto 0 auto;
+  width: fit-content;
+  position: relative;
+}
+.input__amount input {
+  box-sizing: border-box;
   color: #929699;
   display: block;
   width: 268px;
-  border: 1px solid #929699;
-  border-radius: 2px;
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 9px 16px 9px;
+  padding: 16px 7px 16px 7px;
 }
-.input__amount input {
-  display: none;
+.input__amount input:focus ~ #input-dollar {
+  color: #4B9200;
+}
+.input__amount #input-dollar {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  bottom: 0;
+  margin: auto;
 }
 
-.payment__options:active {
-  color: blueviolet;
+.payment__options {
+  display: flex;
+  box-sizing: border-box;
+  gap: 50px;
+  padding: 23px 56px 34px 0;
+  width: fit-content;
+  margin: 0 auto;
+}
+.payment__options input {
+  display: none;
+}
+.payment__options label {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-round {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #fe9013;
+}
+#radio1:checked ~ #label1 div {
+  background-color: #fe9013;
+}
+
+#radio2:checked ~ #label2 div {
+  background-color: #fe9013;
+}
+
+.help-bottom__text {
+  padding-top: 30px;
+  text-align: center;
 }
 
 .range__buttons {
@@ -844,11 +903,12 @@ button:active {
 }
 
 .prices {
+  box-sizing: border-box;
   display: flex;
   width: 100%;
   justify-content: space-between;
+  padding-right: 23px;
 }
-
 .prices h2 {
   font-weight: 500;
   font-size: 26px;

@@ -68,9 +68,14 @@ align-self: center;
 }
 
 .prices {
+    box-sizing: border-box;
   display: flex;
   width: 100%;
   justify-content: space-between;
+  padding-right: 23px;
+  & :nth-child(2){
+//    margin-right: 20px;
+  }
 }
 
 .prices {

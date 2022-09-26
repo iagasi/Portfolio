@@ -1,7 +1,7 @@
 .animals {
   overflow: hidden;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom:23px;
   // display: none;
   &__flower {
     position: absolute;
@@ -20,13 +20,13 @@
   }
   &-btn {
     display: block;
-    margin: 84px auto;
+    margin: 77px auto;
   }
 }
 .animals__top {
   display: flex;
   gap: 87px;
-  padding: 138px 0 175px 0px;
+  padding: 148px 0 175px 0px;
   & img {
     height: 403px;
   }

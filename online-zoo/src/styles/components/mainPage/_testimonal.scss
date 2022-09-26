@@ -42,16 +42,22 @@
 }
 
 .card-item {
+  cursor: pointer;
+
+  background: linear-gradient(#f1f3f2, #f1f3f2) padding-box,
+  linear-gradient(90deg, rgba(254, 189, 171, 0.74),rgba(243, 169, 248, 0.66)) border-box;
   box-sizing: border-box;
   width: 268px;
   height: 391px;
   overflow: hidden;
-  border: 2px solid rgba(254, 189, 171, 0.74);
+  border-radius: 20px;
+border-width: 2px;
+ border-style: solid;
+ border-color: transparent;
 
   padding: 15px 14px 19px 16px;
 
-  background: #f1f3f2;
-  border-radius: 20px;
+  
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -59,6 +65,9 @@
     display: flex;
     gap: 10px;
   }
+
+
+
 }
 
 .card-item__user {
@@ -76,6 +85,7 @@
 }
 
 .scroll {
+  cursor: pointer;
   margin: 21px auto;
   width: 599px;
   height: 8px;
@@ -90,5 +100,10 @@
 
     background: #fe9013;
     border-radius: 5px;
+  }
+  &:hover{
+    .scroll__item{
+background-color: $buttonsMainColor ;
+    }
   }
 }
