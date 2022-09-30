@@ -1,5 +1,9 @@
 .container{
    max-width:$containerWidth ;
     margin: 0 auto;
-    
+
+    @media  (max-width:$brakePoint1200){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }

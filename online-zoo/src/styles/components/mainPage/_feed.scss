@@ -1,26 +1,49 @@
 .feed {
   @extend %feedBackground;
   padding: 70px 0 100px 0;
+  @media screen and (max-width: $brakePoint1200) {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
 
   &__content {
     background-color: $feedContentColor;
     border-radius: 20px;
     padding: 41px 0 59px 0;
     text-align: center;
-
+    @media screen and (max-width: $brakePoint1200) {
+      padding-top: 30px;
+      padding-bottom: 51px;
+    }
     &-text {
       padding: 0 0 0 99px;
       text-align: left;
+      @media screen and (max-width: $brakePoint1200) {
+        padding: 0 0 0 49px;
+      }
     }
   }
   &-options {
     padding-top: 60px;
+    @media screen and (max-width: $brakePoint1200) {
+      padding-top: 39px;
+    }
   }
   &__small-subtitle {
     padding-top: 33px;
+    @media screen and (max-width: $brakePoint1200) {
+      padding-top: 19px;
+    }
   }
   &__description {
     padding-top: 10px;
+    @media screen and (max-width: $brakePoint1200) {
+      & br {
+        display: none;
+      }
+      width: 90%;
+    }
+
     & span {
       cursor: pointer;
       border-bottom: 1px solid $mainBorderColor;
@@ -29,6 +52,10 @@
   &__bold-description {
     font-weight: 500;
     padding-top: 40px;
+    @media screen and (max-width: $brakePoint1200) {
+      padding-top: 23px;
+      width: 90%;
+    }
   }
 }
 
@@ -36,6 +63,11 @@
   padding: 38px 0 0 198px;
   display: flex;
   gap: 30px;
+  @media screen and (max-width: $brakePoint1200) {
+    width: fit-content;
+    padding-left: 0;
+    margin: 0 auto;
+  }
   & :nth-child(1) {
     & p {
       padding-top: 0;
@@ -73,4 +105,7 @@
 
 .feed__submit-button {
   margin-top: 60px;
+  @media screen and (max-width: $brakePoint1200) {
+   margin-top: 71px;
+  }
 }

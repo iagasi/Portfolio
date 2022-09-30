@@ -1,29 +1,55 @@
 .hero {
   position: relative;
-overflow: hidden;
-&__mainImg{
-   width: 100vw;
-}
-  &-btn{
-    margin:68px 25px;
-    float:right;
+
+  &__mainImg {
+    width: 100vw;
+    @media screen and (max-width: $brakePoint1300) {
+      height: 630px;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: $brakePoint1200) {
+      height: 584px;
+    }
+  }
+  &-btn {
+    margin: 68px 25px;
+    float: right;
     color: white;
+    @media screen and (max-width: $brakePoint1200) {
+      margin: 44px 92px;
+    }
   }
 }
 
 .hero__content {
+  z-index: -1;
   position: absolute;
   top: 92px;
   right: 280px;
   z-index: 10;
   width: 500.31px;
-
+  @media screen and (max-width: $brakePoint1500) {
+    right: 100px;
+    & img {
+      width: 400px;
+      height: 400px;
+    }
+  }
+  @media screen and (max-width: $brakePoint1200) {
+    right: 44px;
+    top: 69px;
+    & img {
+      width: 367px;
+      height: 367px;
+    }
+  }
 }
 
 .hero__text {
-    position: absolute;
-    top: 75px;
-    left: 85px;
+  position: absolute;
+  top: 75px;
+  left: 85px;
   font-style: normal;
   font-weight: 700;
   font-size: 106.496px;
@@ -32,4 +58,12 @@ overflow: hidden;
 
   text-align: center;
   text-transform: uppercase;
+  @media screen and (max-width: $brakePoint1500) {
+    font-size: 90px;
+  }
+  @media screen and (max-width: $brakePoint1200) {
+    font-size: 85px;
+    top: 53px;
+    left: 15px;
+  }
 }

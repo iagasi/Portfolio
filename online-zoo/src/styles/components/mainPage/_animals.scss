@@ -1,34 +1,63 @@
 .animals {
   overflow: hidden;
   position: relative;
-  padding-bottom:23px;
-  // display: none;
+  padding-bottom: 23px;
+  @media screen and (max-width: $brakePoint1200) {
+    padding-bottom: 64px;
+  }
   &__flower {
     position: absolute;
     top: 12px;
     right: -13px;
+    @media screen and (max-width: $brakePoint1500) {
+      display: none;
+    }
   }
   &__palm {
     position: absolute;
     bottom: 0;
     left: 0;
+    @media screen and (max-width: $brakePoint1400) {
+      width: 241px;
+      height: 180px;
+    }
   }
   &__strelitzia {
     position: absolute;
     bottom: 0px;
     right: 0;
+    @media screen and (max-width: $brakePoint1400) {
+      width: 239px;
+      height: 172px;
+    }
   }
   &-btn {
     display: block;
     margin: 77px auto;
   }
 }
+
 .animals__top {
   display: flex;
   gap: 87px;
   padding: 148px 0 175px 0px;
+  @media screen and (max-width: $brakePoint1200) {
+    width: 946px;
+    margin: 0 auto;
+    padding: 107px 0 175px 0;
+    gap: 30px;
+    padding-left: 5px;
+    padding-bottom: 137px;
+
+    margin: o auto;
+  }
   & img {
     height: 403px;
+    @media screen and (max-width: $brakePoint1200) {
+      width: 455px;
+      height: 408px;
+      object-fit: cover;
+    }
   }
 }
 .animals__cards {
@@ -37,6 +66,10 @@
   grid-template-columns: auto auto auto;
   grid-column-gap: 30px;
   grid-row-gap: 20px;
+  @media (max-width: $brakePoint1400) {
+    grid-column-gap: 28px;
+    grid-row-gap: 92px;
+  }
 }
 
 .animals__text {
@@ -44,6 +77,9 @@
     font-weight: 400;
     font-size: 4.8em;
     line-height: 120%;
+    @media screen and (max-width: $brakePoint1200) {
+      margin-top: -9px;
+    }
   }
   & h5 {
     padding-top: 23px;
@@ -71,25 +107,39 @@
     font-size: 16px;
     line-height: 140%;
     color: #333b41;
+    @media screen and (max-width: $brakePoint1200) {
+      max-width: 454px;
+    }
+  }
+}
+.animals__controll {
+  position: absolute;
+  z-index: 111;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 403px;
+  width: 1322px;
+  left: -81px;
+  @media (max-width: $brakePoint1400) {
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 445px;
+  }
+  @media (max-width: $brakePoint1200) {
+    top: 370px;
+    width: 70%;
+    width: 33%;
   }
 }
 
-
-.animals__nav-btn{
-position: absolute;
-
+.animals__nav-btn {
 }
 
-.animals__nav-left{
-  top: 0;
-  bottom: 0;
-  margin: auto ;
-  left:-85px
+.animals__nav-left {
 }
 
-.animals__nav-right{
-  top: 0;
-  bottom: 0;
-  margin: auto ;
- right:-85px
+.animals__nav-right {
 }

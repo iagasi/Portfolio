@@ -1,9 +1,12 @@
 .header {
   position: absolute;
+  z-index: 100;
   width: 100%;
   background-color: $headerBackgroundColor;
   color: $headerFontColor;
   height: 80px;
+  box-sizing: border-box;
+ 
   &__content {
     display: grid;
     grid-template-columns: auto auto 1fr;
@@ -19,7 +22,7 @@ color: $mainBorderColor;
   position: relative;
   & h1 {
     @extend %headerLogo;
-    // margin: 18px 0 18px 0;
+  
   }
   &__bamboo{
 position: absolute;
@@ -35,6 +38,9 @@ bottom: 25px;
 
   justify-content: space-between;
   padding: 29px 0px 29px 65px;
+  @media screen and (max-width: $brakePoint1300) {
+    gap: 47px;
+  }
   & li {
     @extend %headerLink;
   }

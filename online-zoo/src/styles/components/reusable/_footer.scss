@@ -1,6 +1,10 @@
 .footer {
+  position: relative;
   background: #111115;
   padding: 40px 0 50px 0;
+  @media screen and (max-width: $brakePoint1200) {
+    padding-left: 13px;
+  }
 
   &__col3 {
     display: flex;
@@ -14,6 +18,9 @@
   }
 
   &__nav {
+    @media screen and (max-width: $brakePoint1200) {
+      margin-left: 0;
+    }
     & a:hover {
       color: $mainBorderColor;
     }
@@ -22,12 +29,26 @@
     margin-left: 40px;
     & .nav {
       padding-bottom: 0;
+      @media screen and (max-width: $brakePoint1200) {
+        padding-left: 0;
+      }
     }
   }
   &__subscribtion {
     display: grid;
     color: white;
     padding-left: 30px;
+    @media screen and (max-width: $brakePoint1200) {
+      padding-left: 0;
+      height: calc(100% - 40px - 50px);
+      position: absolute;
+      right: 0;
+      padding-right: 16px;
+      padding-left: 15px;
+    }
+    & :nth-child(1) {
+      padding-right: 30px;
+    }
   }
 }
 .social {
@@ -78,16 +99,26 @@
 }
 
 .email-input {
-  width: 220px;
-  height: 35px;
+  box-sizing: border-box;
+  font-size: 1.6em;
+  display: block;
+  width: 228px;
+  height: 42px;
   background-color: inherit;
   color: #bdbdbd;
   border-radius: 2px;
-  border: 2px solid orange;
+  border: 1px solid orange;
+  @media screen and (max-width: $brakePoint1200) {
+    width: 230px;
+    height: 42px;
+    padding-left: 8px;
+  }
 }
 .subscription__items {
-  padding-top: 16px;
+  padding-top: 14px;
   width: 100%;
+  display: flex;
+  gap: 10px;
 }
 
 .footer__contacts .logo :hover {
@@ -106,5 +137,11 @@
   color: $linkActive;
   .social__item-logo {
     background: $linkActive;
+  }
+}
+
+.footer__contacts {
+  .logo__bamboo {
+    bottom: 13px;
   }
 }
