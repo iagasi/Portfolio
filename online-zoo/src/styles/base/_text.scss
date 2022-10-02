@@ -4,6 +4,9 @@
   font-size: 48px;
   line-height: 120%;
   text-align: center;
+  @media screen and (max-width: $brakePoint995) {
+    font-size: 4.2em;
+  }
 }
 .subtitle {
   font-style: normal;
@@ -13,6 +16,15 @@
   /* identical to box height, or 47px */
 text-align: center;
   color: #333b41;
+  @media screen and (max-width: $brakePoint995) {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    letter-spacing: 1px;
+    }
+  @media screen and (max-width: $brakePoint635) {
+  font-size: 2.4em;
+  }
 }
 
 .small-subtitle {
@@ -20,7 +32,9 @@ text-align: center;
   font-weight: 400;
   font-size: 24px;
   line-height: 120%;
-  //   letter-spacing: 0.1px;
+  // @media screen and (max-width: $brakePoint635) {
+  //   font-size: 15px;
+  //   }
 }
 
 .description{

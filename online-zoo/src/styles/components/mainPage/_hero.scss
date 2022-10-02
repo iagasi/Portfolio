@@ -1,4 +1,5 @@
 .hero {
+  overflow: hidden;
   position: relative;
 
   &__mainImg {
@@ -11,6 +12,12 @@
     @media screen and (max-width: $brakePoint1200) {
       height: 584px;
     }
+    @media screen and (max-width: $brakePoint995) {
+      height: 373px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      height: 184px;
+    }
   }
   &-btn {
     margin: 68px 25px;
@@ -18,6 +25,17 @@
     color: white;
     @media screen and (max-width: $brakePoint1200) {
       margin: 44px 92px;
+    }
+    @media screen and (max-width: $brakePoint995) {
+      position: absolute;
+      width: 298px;
+      height: 54px;
+      left: -51px;
+      bottom: 6px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      display: none;
+      
     }
   }
 }
@@ -44,6 +62,34 @@
       height: 367px;
     }
   }
+  @media screen and (max-width: $brakePoint995) {
+    padding: 0;
+
+    margin: 0;
+    position: absolute;
+    padding-top: 10px;
+    left: -20px;
+    top: 32px;
+    width: 100%;
+
+    height: calc(100% - 34px);
+
+    & img {
+      right: 0;
+      position: absolute;
+      right: 50px;
+      width: 237.6px;
+      height: 237.6px;
+    }
+  }
+  @media screen and (max-width: $brakePoint635) {
+    left: 15px;
+    top: 7px;
+    img {
+      width: 119.09px;
+      height: 119.09px;
+    }
+  }
 }
 
 .hero__text {
@@ -65,5 +111,21 @@
     font-size: 85px;
     top: 53px;
     left: 15px;
+  }
+  @media screen and (max-width: $brakePoint995) {
+    left: auto;
+    font-size: 54px;
+    width: 255.64px;
+    height: 204.38px;
+    top: 51px;
+
+    right: 0px;
+  }
+  @media screen and (max-width: $brakePoint635) {
+    width: 128.13px;
+    height: 102.44px;
+    font-size: 2.8em;
+    top: 31px;
+    right: 24px;
   }
 }

@@ -1,9 +1,25 @@
+.animals-watch-btn {
+  display: none;
+  @media screen and (max-width: $brakePoint635) {
+    display: block;
+    margin: 18px auto;
+  }
+}
+
 .animals {
+  display: none;
   overflow: hidden;
   position: relative;
   padding-bottom: 23px;
+ 
   @media screen and (max-width: $brakePoint1200) {
-    padding-bottom: 64px;
+    padding-bottom: 60px;
+  }
+  @media screen and (max-width: $brakePoint995) {
+    padding-bottom: 40px;
+  }
+  @media screen and (max-width: $brakePoint635) {
+    padding-bottom: 54px;
   }
   &__flower {
     position: absolute;
@@ -11,6 +27,21 @@
     right: -13px;
     @media screen and (max-width: $brakePoint1500) {
       display: none;
+    }
+    @media screen and (max-width: $brakePoint995) {
+      height: 476px;
+
+      display: flex;
+      top: 0;
+      right: 0;
+      top: -9px;
+      right: -25px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      height: 255px;
+      top: 16px;
+      right: -52px;
+      object-fit: contain;
     }
   }
   &__palm {
@@ -21,6 +52,14 @@
       width: 241px;
       height: 180px;
     }
+    @media screen and (max-width: $brakePoint995) {
+      width: 134px;
+      height: 204px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      width: 62px;
+      height: 68px;
+    }
   }
   &__strelitzia {
     position: absolute;
@@ -30,10 +69,24 @@
       width: 239px;
       height: 172px;
     }
+    @media screen and (max-width: $brakePoint995) {
+      width: 180px;
+      height: 126px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      width: 47px;
+      height: 71px;
+    }
   }
   &-btn {
     display: block;
     margin: 77px auto;
+    @media screen and (max-width: $brakePoint995) {
+      margin: 60px auto;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      margin: 7px auto;
+    }
   }
 }
 
@@ -48,9 +101,22 @@
     gap: 30px;
     padding-left: 5px;
     padding-bottom: 137px;
-
-    margin: o auto;
   }
+  @media screen and (max-width: $brakePoint995) {
+    padding: 0;
+    padding-top: 64px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 0;
+    padding-bottom: 54px;
+    padding-bottom: 76px;
+  }
+
+  @media screen and (max-width: $brakePoint635) {
+    padding-top: 23px;
+    padding-bottom: 36px;
+  }
+
   & img {
     height: 403px;
     @media screen and (max-width: $brakePoint1200) {
@@ -58,27 +124,30 @@
       height: 408px;
       object-fit: cover;
     }
-  }
-}
-.animals__cards {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-column-gap: 30px;
-  grid-row-gap: 20px;
-  @media (max-width: $brakePoint1400) {
-    grid-column-gap: 28px;
-    grid-row-gap: 92px;
+    @media screen and (max-width: $brakePoint995) {
+      display: none;
+      padding-left: 0;
+    }
   }
 }
 
 .animals__text {
+  @media screen and (max-width: $brakePoint635) {
+    width: 100%;
+  }
   & h2 {
     font-weight: 400;
     font-size: 4.8em;
     line-height: 120%;
     @media screen and (max-width: $brakePoint1200) {
       margin-top: -9px;
+    }
+    @media screen and (max-width: $brakePoint995) {
+      width: 454px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      font-size: 2.4em;
+      width: 100%;
     }
   }
   & h5 {
@@ -88,6 +157,23 @@
     font-size: 16px;
     line-height: 130%;
     color: #333b41;
+    @media screen and (max-width: $brakePoint995) {
+      width: 495px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      padding-top: 10px;
+      padding-bottom: 0;
+      background-color: brown;
+      visibility: hidden;
+      height: 73px;
+      width: 100%;
+      padding-bottom: 10px;
+      margin: 0;
+      &::before {
+        content: "The site was founded on the basis of a volunteer movement to protect and care for animals.";
+        visibility: visible;
+      }
+    }
   }
   & h3 {
     padding-top: 54px;
@@ -95,9 +181,14 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 120%;
-    /* identical to box height, or 29px */
 
     color: #333b41;
+    @media screen and (max-width: $brakePoint995) {
+      padding-top: 30px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      padding-top: 0px;
+    }
   }
   & p {
     padding-top: 34px;
@@ -110,6 +201,49 @@
     @media screen and (max-width: $brakePoint1200) {
       max-width: 454px;
     }
+    @media screen and (max-width: $brakePoint995) {
+      padding-top: 20px;
+      margin: 0;
+    }
+    @media screen and (max-width: $brakePoint995) {
+      max-width: 495px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      padding-top: 10px;
+    }
+  }
+}
+.animals__text h5 ::after {
+}
+.animals__cards {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+  // display: flex;
+  // flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  @media (max-width: $brakePoint1400) {
+    grid-column-gap: 28px;
+    grid-row-gap: 92px;
+  }
+  @media (max-width: $brakePoint995) {
+    grid-column-gap: 28px;
+    grid-row-gap: 92px;
+    max-width: 100%;
+    height: 756px;
+    grid-template-columns: auto auto;
+    //overflow: hidden;
+  }
+  @media (max-width: $brakePoint635) {
+    grid-template-columns: auto;
+    gap: 20px;
+    height: 1400px;
+  }
+  @media (max-width: 330px) {
+    justify-content: left;
   }
 }
 .animals__controll {
@@ -130,16 +264,27 @@
   }
   @media (max-width: $brakePoint1200) {
     top: 370px;
-    width: 70%;
-    width: 33%;
+
+    width: 32%;
+  }
+  @media (max-width: $brakePoint995) {
+    top: 346px;
+
+    width: 26%;
+  }
+  @media (max-width: $brakePoint635) {
+    top: 0;
+    background-color: aqua;
+    height: fit-content;
+    display: none;
   }
 }
 
-.animals__nav-btn {
-}
+// .animals__nav-btn {
+// }
 
-.animals__nav-left {
-}
+// .animals__nav-left {
+// }
 
-.animals__nav-right {
-}
+// .animals__nav-right {
+// }

@@ -6,6 +6,7 @@ $containerWidth: 1160px;
 $buttonsMainColor: #f9804b;
 $mainBorderColor: #fe9013;
 $rangeActiveColor: #fe9013;
+$titleColor: #fe9013;
 $linkActive: #4B9200;
 .orange {
   color: #fe9013;
@@ -18,7 +19,8 @@ $brakePoint1400:1400px;
 $brakePoint1300:1300px;
 $brakePoint1200:1200px;
 $brakePoint995:995px;
-
+$brakePoint600:600px;
+$brakePoint635:635px;
 .link-active {
   background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   -webkit-background-clip: text;

@@ -1,15 +1,21 @@
 .card {
   position: relative;
-  @media screen and (max-width:$brakePoint1200) {
-   
-  
+  @media screen and (max-width: $brakePoint1200) {
     width: 294px;
     height: 354px;
   }
-& img{
-z-index: 110;
-}
- overflow: hidden;
+
+  @media screen and (max-width: $brakePoint995) {
+    box-sizing: border-box;
+    width: 285px;
+    height: 332px;
+
+    
+  }
+  & img {
+    z-index: 110;
+  }
+  overflow: hidden;
   width: 366px;
   height: 426px;
   border: 1px solid $headerActiveLink;
@@ -23,7 +29,6 @@ z-index: 110;
     padding: 5px 13px 0px 16px;
   }
   &__description {
-
     & h3 {
       font-weight: 500;
       font-size: 1.6em;
@@ -36,7 +41,7 @@ z-index: 110;
   }
 }
 .card__bottom {
-  & img{
+  & img {
     height: 38px;
   }
   height: 62px;
@@ -44,37 +49,30 @@ z-index: 110;
   position: absolute;
   z-index: -1;
   bottom: 60px;
-  display:flex ;
+  display: flex;
   justify-content: space-between;
- background-color: rgba($color: #726f6f, $alpha: 0.5)
-// background-color: white;
- 
+  background-color: rgba($color: #726f6f, $alpha: 0.5);
+  // background-color: white;
 }
 
-
-
-
-.card__img{
-  @media screen and (max-width:$brakePoint1200) {
-   
+.card__img {
+  @media screen and (max-width: $brakePoint1200) {
     width: 100%;
   }
-
 }
 
 .card:hover {
-
   & .card__img {
-    // opacity: 0.5;
-    // filter: alpha(opacity=40);
+    
     width: 376;
     height: 376px;
- 
-  
+    @media screen and (max-width: $brakePoint995) {
+      width: 295px;
+    height: 302px;
+    }
   }
-  .card__bottom{
+  .card__bottom {
     transition: 1s;
     bottom: -15px;
-    }
+  }
 }
-

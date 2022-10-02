@@ -1,11 +1,33 @@
 .feed {
+  @media screen and (max-width: $brakePoint635) {
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-bottom: 0;
+  }
   @extend %feedBackground;
   padding: 70px 0 100px 0;
   @media screen and (max-width: $brakePoint1200) {
     padding-top: 30px;
     padding-bottom: 50px;
   }
+  @media screen and (max-width: $brakePoint995) {
+    padding-top: 20px;
+    padding-bottom: 20px;
 
+    & .container {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  &-title {
+    // font-size: 4.8em;
+    color: $titleColor;
+    @media screen and (max-width: $brakePoint1200) {
+    }
+    @media screen and (max-width: $brakePoint635) {
+      font-size: 2.4em;
+    }
+  }
   &__content {
     background-color: $feedContentColor;
     border-radius: 20px;
@@ -15,11 +37,30 @@
       padding-top: 30px;
       padding-bottom: 51px;
     }
+    @media screen and (max-width: $brakePoint995) {
+      padding: 10px 20px 60px 20px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      padding: 0;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
     &-text {
       padding: 0 0 0 99px;
       text-align: left;
       @media screen and (max-width: $brakePoint1200) {
         padding: 0 0 0 49px;
+      }
+      @media screen and (max-width: $brakePoint995) {
+        padding: 0;
+        padding-top: 3px;
+        font-size: 12px;
+        text-align: left;
+      }
+      @media screen and (max-width: $brakePoint635) {
+        padding: 0;
+        margin: 0;
+        text-align: center;
       }
     }
   }
@@ -28,11 +69,37 @@
     @media screen and (max-width: $brakePoint1200) {
       padding-top: 39px;
     }
+    @media screen and (max-width: $brakePoint995) {
+      padding-top: 27px;
+      padding-right: 11px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      padding-top: 20px;
+    }
+    & h3 {
+      @media screen and (max-width: $brakePoint635) {
+        font-size: 2.4em;
+      }
+    }
   }
   &__small-subtitle {
     padding-top: 33px;
     @media screen and (max-width: $brakePoint1200) {
       padding-top: 19px;
+    }
+    // @media screen and (max-width: $brakePoint995) {
+    //   font-size: 2.2em;
+    //   padding: 0;
+    //   padding-top: 19px;
+    // }
+    @media screen and (max-width: $brakePoint995) {
+      font-size: 1.8em;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      padding-top: 10px;
+      font-size: 18px;
+
+      width: 100%;
     }
   }
   &__description {
@@ -43,7 +110,13 @@
       }
       width: 90%;
     }
-
+    @media screen and (max-width: $brakePoint995) {
+      font-size: 16px;
+      width: 100%;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      display: none;
+    }
     & span {
       cursor: pointer;
       border-bottom: 1px solid $mainBorderColor;
@@ -56,39 +129,117 @@
       padding-top: 23px;
       width: 90%;
     }
+    @media screen and (max-width: $brakePoint995) {
+      font-size: 16px;
+      width: 100%;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      display: none;
+    }
   }
 }
-
+/////////FEED CARDS
 .feed__cards {
+  position: relative;
   padding: 38px 0 0 198px;
   display: flex;
   gap: 30px;
+  // flex-wrap: wrap;
+
+  height: auto;
+  justify-content: center;
+  width: fit-content;
+
   @media screen and (max-width: $brakePoint1200) {
-    width: fit-content;
+    // width: fit-content;
     padding-left: 0;
     margin: 0 auto;
+  }
+  @media screen and (max-width: $brakePoint995) {
+    padding: 0;
+    padding-top: 18px;
+    width: 100%;
+    gap: 42px;
+  }
+  @media screen and (max-width: $brakePoint635) {
+    height: auto;
+    justify-content: center;
+    gap: 10px;
+  }
+  @media screen and (max-width: 580px) {
+    flex-direction: column;
+    align-items: center;
   }
   & :nth-child(1) {
     & p {
       padding-top: 0;
       padding-bottom: 22px;
+      @media screen and (max-width: $brakePoint635) {
+        padding: 8px 0px 0 0;
+      }
     }
   }
 }
+/////////FEED CARDS END
+
 .feed__arrow-img {
   margin-bottom: 70px;
+  @media screen and (max-width: $brakePoint995) {
+    display: none;
+  }
 }
+//////GREEN ARROWS
+.feed__green-arrows {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 119px;
+  padding-right: 5px;
+  top: 0;
+  @media screen and (max-width: 580px) {
+    width: fit-content;
+    flex-direction: column;
+    height: 100%;
+    height: 95%;
+    // right: -6px;
+    margin-left: 204px;
+    gap: 229px;
+  }
+}
+.feed__green-arrow {
+  display: none;
+  height: 29px;
+  @media screen and (max-width: $brakePoint995) {
+    display: block;
+  }
+  @media screen and (max-width: 580px) {
+    transform: rotate(90deg);
+  }
+}
+//////GREEN ARROWS END
+
 .feed__card-item {
+  box-sizing: border-box;
   width: 168px;
   height: 244px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
+  @media screen and (max-width: $brakePoint635) {
+    box-sizing: border-box;
+    width: 168px;
+    height: 236px;
+    justify-content: flex-start;
+  }
   & p {
     line-height: 140%;
     text-align: left;
     padding-top: 22px;
+    @media screen and (max-width: $brakePoint635) {
+      padding-top: 8px;
+    }
   }
 }
 
@@ -106,6 +257,12 @@
 .feed__submit-button {
   margin-top: 60px;
   @media screen and (max-width: $brakePoint1200) {
-   margin-top: 71px;
+    margin-top: 71px;
+  }
+  @media screen and (max-width: $brakePoint995) {
+    margin-top: 40px;
+  }
+  @media screen and (max-width: $brakePoint635) {
+    margin: 28px auto auto;
   }
 }
