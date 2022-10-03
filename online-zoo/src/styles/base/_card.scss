@@ -68,11 +68,15 @@
     height: 376px;
     @media screen and (max-width: $brakePoint995) {
       width: 295px;
-    height: 302px;
+    height: 290px;
+
     }
   }
   .card__bottom {
     transition: 1s;
     bottom: -15px;
+    @media screen and (max-width: $brakePoint995) {
+      bottom: -25px;
+    }
   }
 }

@@ -80,6 +80,7 @@
 
 ///////////HEADER BURGER
 .burger {
+  cursor: pointer;
   width: 18px;
   height: 10px;
   display: flex;
@@ -97,6 +98,8 @@
   }
 }
 
+
+
 .burger-item {
   width: 18px;
   height: 2px;
@@ -104,5 +107,7 @@
 
   background-color: white;
 }
-
+.burger:hover {.burger-item{
+  background-color: $headerActiveLink
+}}
 ///////////HEADER BURGER
