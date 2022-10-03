@@ -46,7 +46,7 @@
                                 <a tabindex="1">Zoos</a>
                             </li>
                             <li class="nav__link">
-                                <a  href="./donate.html"tabindex="1"> Donate</a>
+                                <a href="./donate.html" tabindex="1"> Donate</a>
                             </li>
                             <li class="nav__link">
                                 <a tabindex="1">Contact us</a>
@@ -55,7 +55,11 @@
                         <div class="header__designer">
                             <a href="https://www.figma.com/" tabindex="1"> Designed by ©</a>
                         </div>
-
+                        <div class="burger">
+                            <div class="burger-item"></div>
+                            <div class="burger-item"></div>
+                            <div class="burger-item"></div>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -71,6 +75,7 @@
             </div>
         </section>
         <section class="animals">
+            <button class="default-button animals-watch-btn">WATCH ONLINE</button>
 
             <img class="animals__flower" src="97b70a3ffa384b319f1b.png" alt=" flower">
             <img class="animals__palm" src="f7e2f7b95a17017533db.png" alt="palm">
@@ -94,14 +99,18 @@
                 </div>
 
                 <div class="animals__cards">
-                    <button class="round-button animals__nav-btn animals__nav-left">
-                        &larr;
-                    </button>
-                    <button class="round-button  animals__nav-btn animals__nav-right">
-                        &rarr;
-                    </button>
+                    <div class="animals__controll">
+
+                        <button class="round-button animals__nav-btn animals__nav-left">
+                            &larr;
+                        </button>
+                        <button class="round-button  animals__nav-btn animals__nav-right">
+                            &rarr;
+                        </button>
+                    </div>
+
                     <div class="card">
-                        <img  class="card__img"src="8aff1ca87e3cbc60f1e2.png" alt="">
+                        <img class="card__img" src="8aff1ca87e3cbc60f1e2.png" alt="">
                         <div class="card__bottom">
                             <div class="card__description">
                                 <h3>GIANT PANDAS</h3>
@@ -125,7 +134,7 @@
 
                     </div>
                     <div class="card">
-                        <img class="card__img"src="f8938b5576ab3db2ddce.png" alt="">
+                        <img class="card__img" src="f8938b5576ab3db2ddce.png" alt="">
                         <div class="card__bottom">
                             <div class="card__description">
                                 <h3>GORILLAS</h3>
@@ -137,7 +146,7 @@
 
                     </div>
                     <div class="card">
-                        <img class="card__img"src="a7315efcef2b4248afc7.png" alt="">
+                        <img class="card__img" src="a7315efcef2b4248afc7.png" alt="">
                         <div class="card__bottom">
                             <div class="card__description">
                                 <h3>TWO-TOED-SLOTH</h3>
@@ -150,7 +159,7 @@
                     </div>
 
                     <div class="card">
-                        <img class="card__img"src="f5860638ffac98b919f8.png" alt="">
+                        <img class="card__img" src="f5860638ffac98b919f8.png" alt="">
                         <div class="card__bottom">
                             <div class="card__description">
                                 <h3>CHEETAHS</h3>
@@ -181,7 +190,7 @@
         <section class="feed">
             <div class="container">
                 <div class="feed__content">
-                    <h2 class="title feed__title">Pick and feed a friend</h2>
+                    <h2 class="title feed-title">Pick and feed a friend</h2>
                     <div class="feed__content-text">
 
 
@@ -207,6 +216,13 @@
                     <div class="feed-options">
                         <h3 class="subtitle">How it works</h3>
                         <div class="feed__cards">
+                            <div class="feed__green-arrows">
+                                <img class="feed__green-arrow" src="a7685d4e7f3c356e8c23.svg"
+                                    alt="">
+                                <img class="feed__green-arrow" src="a7685d4e7f3c356e8c23.svg"
+                                    alt="">
+
+                            </div>
                             <div class="feed__card-item">
 
                                 <div class="feed__card-img">
@@ -217,6 +233,7 @@
                                 <p class="description">Pay with Card</p>
                             </div>
                             <img class="feed__arrow-img" src="1036dbe49765d8cd228c.svg" alt="">
+
                             <div class="feed__card-item">
 
                                 <div class="feed__card-img">
@@ -351,31 +368,32 @@
 
                         </h1>
                     </div>
-                    <button class="default-button btn-sharp-edges"><a href="./donate.html">DONATE FOR VOLONTEERS</a></button>
+                    <button class="default-button btn-sharp-edges"><a href="./donate.html">DONATE FOR
+                            VOLONTEERS</a></button>
                     <div class="social">
 
-                        <a  href="https://www.facebook.com/"class="social__item">
+                        <a href="https://www.facebook.com/" class="social__item">
                             <div class="social__item-logo">
                                 <img src="c4079ec07b4224d034a1.png" alt="facebook">
 
                             </div>
                             <p>Facebook</p>
                         </a>
-                        <a  href="https://www.twitter.com/"class="social__item">
+                        <a href="https://www.twitter.com/" class="social__item">
                             <div class="social__item-logo">
                                 <img src="0d85544b726b5dff7169.png" alt="twitter">
 
                             </div>
                             <p>Twitter</p>
                         </a>
-                        <a  href="https://www.instagram.com/"class="social__item">
+                        <a href="https://www.instagram.com/" class="social__item">
                             <div class="social__item-logo">
                                 <img src="c90559e763570018f4b0.png" alt="instagramm">
 
                             </div>
                             <p>Instagram</p>
                         </a>
-                        <a href="https://youtube.com/"class="social__item">
+                        <a href="https://youtube.com/" class="social__item">
                             <div class="social__item-logo">
                                 <img src="49008ebd316a35f309de.png" alt="youtube">
 
@@ -387,29 +405,29 @@
                 <div class="footer__nav">
                     <ul class="nav">
                         <li class="nav__link link-active">
-                          <a href="#header"> About</a> 
+                            <a href="#header"> About</a>
                         </li>
                         <li class="nav__link">
-                           <a> Map</a>
+                            <a> Map</a>
                         </li>
                         <li class="nav__link">
-                          <a> Zoos</a> 
+                            <a> Zoos</a>
                         </li>
 
                         <li class="nav__link">
-                           <a>Contact us</a> 
+                            <a>Contact us</a>
                         </li>
                     </ul>
                 </div>
                 <div class="footer__subscribtion">
                     <div class="subscription__top">
                         <h2 class="small-subtitle">Subscribe to our news</h2>
-                        
+
                         <form class="subscription__items">
-                            <input type="email" required class="email-input" placeholder="Enter your email" >
+                            <input type="email" required class="email-input" placeholder="Enter your email">
                             <!-- <input type="text" name="firstname" id="firstname" required > -->
 
-                           
+
                             <button class="sumbmit-btn" type="submit">Submit</button>
                         </form>
 
