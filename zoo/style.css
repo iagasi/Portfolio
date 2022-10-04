@@ -359,6 +359,8 @@ button:active {
 @media (max-width: 995px) {
   .header {
     height: 34px;
+    position: fixed;
+    z-index: 1000;
   }
 }
 .header__content {
@@ -667,6 +669,22 @@ button:active {
     object-fit: contain;
   }
 }
+.animals__palmBig {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+@media screen and (max-width: 1400px) {
+  .animals__palmBig {
+    display: block;
+  }
+}
+@media screen and (max-width: 995px) {
+  .animals__palmBig {
+    display: none;
+  }
+}
 .animals__palm {
   position: absolute;
   bottom: 0;
@@ -676,12 +694,14 @@ button:active {
   .animals__palm {
     width: 241px;
     height: 180px;
+    display: none;
   }
 }
 @media screen and (max-width: 995px) {
   .animals__palm {
     width: 134px;
     height: 204px;
+    display: block;
   }
 }
 @media screen and (max-width: 635px) {
@@ -1833,6 +1853,11 @@ button:active {
 .donate-header {
   position: static;
 }
+@media screen and (max-width: 995px) {
+  .donate-header {
+    position: fixed;
+  }
+}
 
 .donate-hero {
   overflow: hidden;
@@ -1853,6 +1878,7 @@ button:active {
   .hero__mainImg-donate {
     height: 335px;
     width: 132%;
+    margin-top: 34px;
   }
 }
 @media screen and (max-width: 635px) {

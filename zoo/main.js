@@ -48,7 +48,17 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n\r\n\r\n\r\n\r\nconsole.log(\"Hello World!\");\r\n\n\n//# sourceURL=webpack://zoo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/main.scss */ \"./src/styles/main.scss\");\n/* harmony import */ var _js_styles_mainImg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/styles/mainImg */ \"./src/js/styles/mainImg.js\");\n/* harmony import */ var _js_styles_mainImg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_styles_mainImg__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\r\nconsole.log(\"Hello World!\");\r\n\r\n\r\n// window.addEventListener(\"resize\",(e)=>{console.log(\"eeeeeeeeeeeee\")\r\n// )\n\n//# sourceURL=webpack://zoo/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/styles/mainImg.js":
+/*!**********************************!*\
+  !*** ./src/js/styles/mainImg.js ***!
+  \**********************************/
+/***/ (() => {
+
+eval("window.addEventListener(\"resize\",(e)=>{\r\n    let width=e.target.innerWidth\r\nif(width==995){\r\n    console.log(\"qq\");\r\n}\r\n})\n\n//# sourceURL=webpack://zoo/./src/js/styles/mainImg.js?");
 
 /***/ }),
 
