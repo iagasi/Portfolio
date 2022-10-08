@@ -12,9 +12,44 @@
     <title>Zoo</title>
 <script defer src="runtime~main.js"></script><script defer src="main.js"></script><link href="style.css" rel="stylesheet"></head>
 
-<body>
+<body id="body">
+<div class="modal">
+    <div class="modal__body"></div>
+    <img class="modal__close" src="4dd8c411cb93d6ee0786.svg" alt="">
+</div>
+    <main class="mainMain">
+        <div id="shadow"></div>
+        <div class="menu not-display">
+            <div class="logo">
+                <img class="logo__bamboo" src="57733faa5cd378125241.png" alt="logo">
+                <h1>
+                    <a href=".">
+                        PetStory online
+                    </a>
 
-    <main>
+                </h1>
+
+            </div>
+            <ul class="nav">
+                <li class="nav__link link-active">
+                    <a class="" tabindex="0"> About</a>
+
+                </li>
+                <li class="nav__link">
+                    <a tabindex="1"> Map</a>
+                </li>
+                <li class="nav__link">
+                    <a tabindex="1">Zoos</a>
+                </li>
+                <li class="nav__link">
+                    <a href="donate.html"> Donate</a>
+                </li>
+                <li class="nav__link">
+                    <a tabindex="1">Contact us</a>
+                </li>
+            </ul>  
+       <img   class="menu__close-btn"src="4dd8c411cb93d6ee0786.svg" alt="">
+        </div>
         <section class="hero">
             <header class="header" id="header">
                 <div class="container">
@@ -268,9 +303,11 @@
                 <h2 class="subtitle">Testimonals</h2>
 
                 <div class="testimomal__cards">
-                    <div class="card-item">
+                    <div class="testimonal__carousel">
+
+                         <!-- <div class="card-item">
                         <div class="card-item__owner">
-                            <img class="card-item__img" src="ca48be2faea49ebfd142.png" alt="userImage">
+                            <img class="card-item__img" src="../img/desktop_petstory/testimonals/1.png" alt="userImage">
                             <div class="card-item__credentials">
                                 <h4 class="description card-item__user-name">Michael John </h4>
                                 <h5 class="card-item__user-location">Local Austria • Today </h5>
@@ -290,7 +327,7 @@
                     </div>
                     <div class="card-item">
                         <div class="card-item__owner">
-                            <img class="card-item__img" src="918f5930dd271cb0de74.png" alt="userImage">
+                            <img class="card-item__img" src="../img/desktop_petstory/testimonals/2.png" alt="userImage">
                             <div class="card-item__credentials">
                                 <h4 class="description card-item__user-name">Oskar Samborsky </h4>
                                 <h5 class="card-item__user-location">Local Austria • Yesterday </h5>
@@ -310,7 +347,7 @@
                     </div>
                     <div class="card-item">
                         <div class="card-item__owner">
-                            <img class="card-item__img" src="36309bd4f8e74104d73c.png" alt="userImage">
+                            <img class="card-item__img" src="../img/desktop_petstory/testimonals/3.png" alt="userImage">
                             <div class="card-item__credentials">
                                 <h4 class="description card-item__user-name">Fredericka Michelin </h4>
                                 <h5 class="card-item__user-location">Local Austria • Yesterday </h5>
@@ -330,7 +367,7 @@
                     </div>
                     <div class="card-item">
                         <div class="card-item__owner">
-                            <img class="card-item__img" src="289d09f77b8321433b24.png" alt="userImage">
+                            <img class="card-item__img" src="../img/desktop_petstory/testimonals/4.png" alt="userImage">
                             <div class="card-item__credentials">
                                 <h4 class="description card-item__user-name">Mila Riksha </h4>
                                 <h5 class="card-item__user-location">Local Austria • Yesterday </h5>
@@ -347,11 +384,16 @@
                             delighted very much ljves to watch gouillas. Online zoo is one jf the ways to instill a love
                             for animals.
                         </p>
+                    </div>         -->
                     </div>
+           
                 </div>
-                <div class="scroll">
+                <input id="t-range" type="range" min="0" max="6"  >
+                <!-- <div class="scroll">
                     <div class="scroll__item"></div>
-                </div>
+                </div> -->
+
+              
                 <button class="default-button  testimonal-btn">LEAVE FEEDBACK</button>
             </div>
             <img class="testimonal__leaf" src="57b7d98e67afbb7b9a5e.png" alt="leaf">
