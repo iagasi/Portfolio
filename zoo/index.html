@@ -13,12 +13,13 @@
 <script defer src="runtime~main.js"></script><script defer src="main.js"></script><link href="style.css" rel="stylesheet"></head>
 
 <body id="body">
-<div class="modal">
-    <div class="modal__body"></div>
-    <img class="modal__close" src="54b0e926855201f19bd5.svg" alt="">
-</div>
+    <div class="modal">
+        <div class="modal__body"></div>
+        <img class="modal__close" src="54b0e926855201f19bd5.svg" alt="">
+    </div>
     <main class="mainMain">
         <div id="shadow"></div>
+        <div id="shadow-menu"></div>
         <div class="menu not-display">
             <div class="logo">
                 <img class="logo__bamboo" src="57733faa5cd378125241.png" alt="logo">
@@ -47,11 +48,12 @@
                 <li class="nav__link">
                     <a tabindex="1">Contact us</a>
                 </li>
-            </ul>  
-       <img   class="menu__close-btn"src="54b0e926855201f19bd5.svg" alt="">
+            </ul>
+            <img class="menu__close-btn" src="54b0e926855201f19bd5.svg" alt="">
         </div>
         <section class="hero">
             <header class="header" id="header">
+
                 <div class="container">
 
                     <div class="header__content">
@@ -134,7 +136,9 @@
                     </div>
                 </div>
 
-                <div class="animals__cards">
+
+
+                <div class="a-cards-outter">
                     <div class="animals__controll">
 
                         <button class="round-button animals__nav-btn animals__nav-left">
@@ -143,82 +147,254 @@
                         <button class="round-button  animals__nav-btn animals__nav-right">
                             &rarr;
                         </button>
-                    </div>
+                    </div> 
+<div class="a-cards-wrapper">
+    <div class="a-card-carousel">
 
-                    <div class="card">
-                        <img class="card__img" src="8aff1ca87e3cbc60f1e2.png" alt="">
-                        <div class="card__bottom">
-                            <div class="card__description">
-                                <h3>GIANT PANDAS</h3>
-                                <p>Native to Southwest China</p>
+
+<!-- 
+                        <div class="animals__cards">
+
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/1.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>GIANT PANDAS</h3>
+                                        <p>Native to Southwest China</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/banana-icon.svg" alt="">
+
+                                </div>
+
                             </div>
-                            <img src="f4a1d0471d5b606c35a7.svg" alt="">
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/2.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>EAGLES</h3>
+                                        <p>Native to South America</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/fish-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/3.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>GORILLAS</h3>
+                                        <p>Native to Congo</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/banana-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/4.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>TWO-TOED-SLOTH</h3>
+                                        <p>Mesoamerica, South America</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/banana-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/5.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>CHEETAHS</h3>
+                                        <p>Native to Africa</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/fish-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/6.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>PENGUINS</h3>
+                                        <p>Native to Antarctica</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/fish-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+
 
                         </div>
+                        <div class="animals__cards  cards-middle">
 
-                    </div>
-                    <div class="card">
-                        <img class="card__img" src="32c3376e8a6589971acf.png" alt="">
-                        <div class="card__bottom">
-                            <div class="card__description">
-                                <h3>EAGLES</h3>
-                                <p>Native to South America</p>
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/1.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>GIANT PANDAS</h3>
+                                        <p>Native to Southwest China</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/banana-icon.svg" alt="">
+
+                                </div>
+
                             </div>
-                            <img src="2297e811f0499003b1da.svg" alt="">
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/2.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>EAGLES</h3>
+                                        <p>Native to South America</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/fish-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/3.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>GORILLAS</h3>
+                                        <p>Native to Congo</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/banana-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/4.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>TWO-TOED-SLOTH</h3>
+                                        <p>Mesoamerica, South America</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/banana-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/5.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>CHEETAHS</h3>
+                                        <p>Native to Africa</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/fish-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/6.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>PENGUINS</h3>
+                                        <p>Native to Antarctica</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/fish-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+
 
                         </div>
+                        <div class="animals__cards">
 
-                    </div>
-                    <div class="card">
-                        <img class="card__img" src="f8938b5576ab3db2ddce.png" alt="">
-                        <div class="card__bottom">
-                            <div class="card__description">
-                                <h3>GORILLAS</h3>
-                                <p>Native to Congo</p>
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/1.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>GIANT PANDAS</h3>
+                                        <p>Native to Southwest China</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/banana-icon.svg" alt="">
+
+                                </div>
+
                             </div>
-                            <img src="f4a1d0471d5b606c35a7.svg" alt="">
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/2.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>EAGLES</h3>
+                                        <p>Native to South America</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/fish-icon.svg" alt="">
 
-                        </div>
+                                </div>
 
-                    </div>
-                    <div class="card">
-                        <img class="card__img" src="a7315efcef2b4248afc7.png" alt="">
-                        <div class="card__bottom">
-                            <div class="card__description">
-                                <h3>TWO-TOED-SLOTH</h3>
-                                <p>Mesoamerica, South America</p>
                             </div>
-                            <img src="f4a1d0471d5b606c35a7.svg" alt="">
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/3.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>GORILLAS</h3>
+                                        <p>Native to Congo</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/banana-icon.svg" alt="">
 
-                        </div>
+                                </div>
 
-                    </div>
-
-                    <div class="card">
-                        <img class="card__img" src="f5860638ffac98b919f8.png" alt="">
-                        <div class="card__bottom">
-                            <div class="card__description">
-                                <h3>CHEETAHS</h3>
-                                <p>Native to Africa</p>
                             </div>
-                            <img src="2297e811f0499003b1da.svg" alt="">
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/4.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>TWO-TOED-SLOTH</h3>
+                                        <p>Mesoamerica, South America</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/banana-icon.svg" alt="">
 
-                        </div>
+                                </div>
 
-                    </div>
-                    <div class="card">
-                        <img class="card__img" src="f82905cb1fbae3c1c96d.png" alt="">
-                        <div class="card__bottom">
-                            <div class="card__description">
-                                <h3>PENGUINS</h3>
-                                <p>Native to Antarctica</p>
                             </div>
-                            <img src="2297e811f0499003b1da.svg" alt="">
 
-                        </div>
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/5.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>CHEETAHS</h3>
+                                        <p>Native to Africa</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/fish-icon.svg" alt="">
 
+                                </div>
+
+                            </div>
+                            <div class="card">
+                                <img class="card__img" src="../img/desktop_petstory/animals/6.png" alt="">
+                                <div class="card__bottom">
+                                    <div class="card__description">
+                                        <h3>PENGUINS</h3>
+                                        <p>Native to Antarctica</p>
+                                    </div>
+                                    <img src="../img/desktop_petstory/animals/fish-icon.svg" alt="">
+
+                                </div>
+
+                            </div>
+
+
+                        </div> -->
                     </div>
+</div>
+                   
+
+                
                 </div>
+
+
                 <button class="default-button animals-btn ">CHOOSE YOUR FAVORITE</button>
 
             </div>
@@ -305,7 +481,7 @@
                 <div class="testimomal__cards">
                     <div class="testimonal__carousel">
 
-                         <!-- <div class="card-item">
+                        <!-- <div class="card-item">
                         <div class="card-item__owner">
                             <img class="card-item__img" src="../img/desktop_petstory/testimonals/1.png" alt="userImage">
                             <div class="card-item__credentials">
@@ -386,14 +562,16 @@
                         </p>
                     </div>         -->
                     </div>
-           
+
                 </div>
-                <input id="t-range" type="range" min="0" max="6"  >
+                <input id="t-range" type="range" min="0" max="6" value="0">
+
+
                 <!-- <div class="scroll">
                     <div class="scroll__item"></div>
                 </div> -->
 
-              
+
                 <button class="default-button  testimonal-btn">LEAVE FEEDBACK</button>
             </div>
             <img class="testimonal__leaf" src="57b7d98e67afbb7b9a5e.png" alt="leaf">
