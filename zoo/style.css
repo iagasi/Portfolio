@@ -403,9 +403,15 @@ button:active {
 }
 @media (max-width: 995px) {
   .logo {
-    position: absolute;
     width: 46.93px;
     height: 29.03px;
+    position: absolute;
+    left: 20px;
+  }
+}
+@media (max-width: 635px) {
+  .logo {
+    left: 10px;
   }
 }
 @media (max-width: 995px) {
@@ -949,7 +955,7 @@ button:active {
 }
 @media (max-width: 1200px) {
   .a-cards-wrapper {
-    height: 801px;
+    height: 807px;
     width: 960px;
   }
 }
