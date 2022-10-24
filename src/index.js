@@ -15,6 +15,8 @@ let seconds = 0
 let minutes = 0
 let gameElements = []
 let t = false
+
+
 const savedGame = getFromLocalStorage("game-save")
 if (savedGame) {
     minutes = savedGame.minutes
@@ -68,6 +70,7 @@ function MAINFN() {
 }
 
 MAINFN()
+
 
 function addDefaultPosition() {
 
@@ -125,7 +128,7 @@ function Move() {
     }
     //Preventes unAllowed Moves
 
-    function moveElement(e) {
+    function moveElement(e,preventAnimation) {
 
 
         //Get BlankPosition
@@ -200,7 +203,10 @@ function Move() {
 
         moves++
         moveCounter.innerHTML = "Moves:" + moves
-        currentElement.classList.add("move")
+        if(!preventAnimation){
+               currentElement.classList.add("move")
+        }
+     
         currentElement.style.top = top + "px"
         currentElement.style.left = left + "px"
         //clicked
@@ -210,13 +216,52 @@ function Move() {
         blankItem.style.left = currElelementLeft + "px"
         //blank
 
-        addEventListener('drag', (event) => { console.log("EEEEEEEEE"); });
         //Moving Elements
-        console.log(currElemtTop);
+      
         game.removeEventListener("click", moveElement)
     }
 
     game.addEventListener("click", moveElement)
+
+
+   
+    game.addEventListener('dragend', (e) => { 
+        var data = e.dataTransfer.getData("text","zzzzz");
+     // e.target.appendChild(document.getElementById(data));
+       console.log(data);
+       
+        const curr=e.target
+        const currSize=curr.offsetWidth
+        const DroppedTop=e.clientY
+        const DroppedLeft=e.clientX-currSize-currSize
+        const blank=document.querySelector("#blank")
+  const BlankTop=blank.style.top.split("px")[0]
+  const BlankLeft=blank.style.left.split("px")[0]
+ 
+console.log(e.target);
+console.log(BlankTop);
+//   if(DroppedTop-BlankTop>currSize||BlankTop-DroppedTop>currSize){
+//     return
+//    }
+
+    //    if(DroppedLeft-BlankLeft>currSize+currSize+currSize||DroppedLeft-BlankLeft<currSize){
+    //     return
+    //    }
+     
+   moveElement(e)
+  
+    });
+ 
+
+
+
+
+
+
+
+
+
+
 
 
     document.body.addEventListener('transitionend', () => {
@@ -225,6 +270,7 @@ function Move() {
     })
 
 }
+
 
 ///After move element generates new list of positioned elements:
 function generateNewElements(array) {
@@ -236,6 +282,7 @@ function generateNewElements(array) {
         const itemBody = document.createElement("div")
         itemBody.classList.add("item__body")
         itemBody.innerHTML = gameElements[i]
+        itemBody.setAttribute("draggable",true)
         if (gameElements[i] == gameElements.length) {
             itemBody.setAttribute("id", "blank")
             itemBody.innerHTML = ""
@@ -307,6 +354,7 @@ function generateGameWithElements(boardSizes,) {
 
         const itemBody = document.createElement("div")
         itemBody.classList.add("item__body")
+        itemBody.setAttribute("draggable" ,true)
         itemBody.innerHTML = gameElements[i]
         if (gameElements[i] == gameElements.length) {
             itemBody.setAttribute("id", "blank")
@@ -338,9 +386,10 @@ function generateFrameSizes() {
 function changeGameSizes() {
 
     const sizes = document.querySelector(".frame-sizes")
- clearAllvalues()
+ 
 
     sizes.addEventListener("click", (e) => {
+        clearAllvalues()
         deleteGameSave()
 
         switch (e.target.innerHTML) {
@@ -546,7 +595,7 @@ function SaveInLocalStorage(results) {
 
     }
     timer.stop()
-    console.log(status);
+  
     localStorage.setItem("game-save", JSON.stringify(status))
 }
 
