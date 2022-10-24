@@ -1,7 +1,7 @@
 
 
 
- export class Modal {
+class Modal {
     constructor() {
         this.doc = document.body
         this.modal = document.createElement("div")
@@ -14,12 +14,21 @@
         // this.doc.appendChild(this.outline)
 
     }
-    openModal(array) {
+    openModal(array, message) {
         this.doc.appendChild(this.modal)
         this.doc.appendChild(this.outline)
         this.outline.classList.add("shadow")
+        if (array) {
 
-        this.generateModalItems(array)
+            this.generateModalItems(array)
+        }
+        if (message) {
+            this.modal.innerHTML=`<button class="modal__button">X</button>`
+            let m = document.createElement("div")
+            m.classList.add("modal__item")
+            m.innerHTML = message
+            this.modal.appendChild(m)
+        }
 
 
         this.close = document.querySelector(".modal__button")
@@ -31,13 +40,13 @@
 
     generateModalItems(array) {
         for (let i = 0; i < array.length; i++) {
-            console.log("4444444444444444");
+
             const e = array[i];
             let modalItem = document.createElement("div")
             modalItem.classList.add("modal__item")
 
-modalItem.innerHTML=  `<div class="modal__item">
-<strong>Moves:${e.moves}</strong> <strong>Time:${e.time}</strong> &nbsp;<strong>Board-Size:${e.boardSize}</strong>
+            modalItem.innerHTML = `<div class="modal__item">
+<strong>Moves:${e.moves}</strong> <strong>Time:${e.minutes+":"+e.seconds}</strong> &nbsp;<strong>Board-Size:${e.boardSize}</strong>
 
 </div>`
             this.modal.appendChild(modalItem)

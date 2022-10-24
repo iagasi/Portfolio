@@ -1,8 +1,8 @@
 // import { Modal } from "./modal"
 var audio = new Audio('./m.wav');
-console.log(audio);
 
 
+let c = 0
 let GAMEBODY
 let moves = 0
 let moveCounter
@@ -41,7 +41,7 @@ function generateControlButtons() {
     control.innerHTML = `
    <div class="control-top">
    <button>Shuffle and Start</button>
-   <button class="#">Start</button>
+   <button id="start-btn"class="#">Start</button>
    <button>Save</button>
    <button>Results</button>
 
@@ -111,9 +111,9 @@ function Move() {
             return false
         }
 
-        if (currElementTop > top + sizeOfElement + 5 || currElementTop < top - sizeOfElement + 5) {
-            console.log(currElementTop > top + sizeOfElement + 5);
-            console.log("topCancel");
+        if (currElementTop < top - sizeOfElement - 5 || currElementTop > top + sizeOfElement + 5) {
+
+            return false
         }
         if (currElelementLeft > left && currElementTop !== top || currElelementLeft < left && currElementTop !== top) {
 
@@ -160,25 +160,40 @@ function Move() {
 
         // checks if Game if finished
         let isSorted = false
-
+        // c++
+        // if (c >= 3) {
+        //     gameElements.sort((a, b) => a - b)
+        // }
         for (let i = 0; i < gameElements.length - 1; i++) {
             isSorted = true
+
+
             if (gameElements[i] > gameElements[i + 1]) {
                 isSorted = false
                 break
             }
         }
+
+
         if (isSorted) {
-            alert("you Won")
+            timer.stop()
+            const m = new Modal()
+            m.openModal(null, `Hooray! You solved the puzzle in ${minutes}:${seconds} and ${moves} moves!`)
+            topResult({ minutes, seconds, moves, boardSize: amountOfElements })
+            return
         }
         ////////
 
 
         //Moving Elements
         //clicked amount
-        audio.play();
 
+        audio.play();
         if (!t) {
+            const sButton = document.querySelector("#start-btn")
+            sButton.classList.add("btn-gray")
+            sButton.innerHTML = "Stop"
+            timer.stop()
             timer.start()
             t = true
         }
@@ -194,6 +209,8 @@ function Move() {
         blankItem.style.top = currElemtTop + "px"
         blankItem.style.left = currElelementLeft + "px"
         //blank
+
+        addEventListener('drag', (event) => { console.log("EEEEEEEEE"); });
         //Moving Elements
         console.log(currElemtTop);
         game.removeEventListener("click", moveElement)
@@ -321,7 +338,7 @@ function generateFrameSizes() {
 function changeGameSizes() {
 
     const sizes = document.querySelector(".frame-sizes")
-    // console.log(sizes);
+ clearAllvalues()
 
     sizes.addEventListener("click", (e) => {
         deleteGameSave()
@@ -384,14 +401,33 @@ const resizeObserver = new ResizeObserver((entries) => {
 })
 resizeObserver.observe(document.body)
 
-console.log(ControllButtons);
+
 
 ControllButtons.addEventListener("click", (e) => {
     let clickedButton = e.target.innerHTML
     if (clickedButton === "Shuffle and Start") {
         localStorage.removeItem("game-save")
+        const movesX=document.querySelector(".score")
+        movesX.firstElementChild.innerHTML="Moves:0"
+        movesX.lastElementChild.innerHTML="Time:0:0"
+        const sButton = document.querySelector("#start-btn")
+        sButton.classList.add("btn-gray")
+        sButton.innerHTML = "Stop"
         gameElements = []
-        clearTimer()
+        if (timer.interval) {
+            timer.stop()
+            clearTimer()
+            timer.start()
+            
+
+        }
+        else{
+            timer.stop()
+            clearTimer()
+            timer.start()
+        }
+
+       
         MAINFN()
 
         moves = 0
@@ -400,32 +436,46 @@ ControllButtons.addEventListener("click", (e) => {
         e.target.classList.toggle("btn-gray")
         e.target.innerHTML = "Stop"
         t = true
-        timer.start()
+        if(!timer.interval){
+             timer.start()  
+        }
+     
 
     }
     if (clickedButton === "Stop") {
         e.target.classList.toggle("btn-gray")
         e.target.innerHTML = "Start"
-        t=false
+        t = false
+        t.interval=null
         timer.stop()
+        
     }
     if (clickedButton === "Save") {
         SaveInLocalStorage()
     }
     if (clickedButton === "Results") {
         const m = new Modal()
-        m.openModal([{ moves: "33", time: "10.30", boardSize: "8" }])
+        const results = localStorage.getItem("gem-result")
+        if (results) {
+            let data = JSON.parse(results)
+            console.log(data);
+
+            m.openModal(data)
+        }
+        if (!results) {
+            m.openModal(null, "<h2>Top 10 list </h2>  <br>List Is Empty")
+        }
     }
 
 })
 
 
 const timer = {
-    interval: setInterval,
+    interval: null,
     start: () => {
         // seconds = 0
         // minutes = 0
-        interval = setInterval(() => {
+        this.interval = setInterval(() => {
             seconds++
             if (seconds == 60) {
                 minutes++
@@ -438,7 +488,7 @@ const timer = {
 
 
     stop: () => {
-        clearInterval(interval)
+        clearInterval(this.interval)
     }
 
 
@@ -451,21 +501,32 @@ function clearTimer() {
 
 
 ////Save in local Storage
-function SaveInLocalStorage(results) {
-    //   const values=  document.querySelectorAll(".item__body")
+
+function topResult(results) {
     if (results) {
 
         let score = JSON.parse(localStorage.getItem("gem-result"))
-        if (score.length <= 10) {
+        if (score) {
+
             score.push(results)
-            localStorage.setItem("gem-result", score)
+            score.sort((a, b) => a.moves - b.moves)
+            if (score.length >= 10) {
+                score.pop()
+            }
+            localStorage.setItem("gem-result", JSON.stringify(score))
+
+
 
         }
-        else {
-
+        if (!score) {
+            localStorage.setItem("gem-result", JSON.stringify([results]))
         }
 
     }
+}
+function SaveInLocalStorage(results) {
+    //   const values=  document.querySelectorAll(".item__body")
+
 
     // const arr=Array.from(values).map(e=>e.innerHTML)
     const values = document.getElementsByClassName("game")
@@ -500,4 +561,16 @@ function getFromLocalStorage(name) {
 function deleteGameSave() {
     gameElements = []
     localStorage.removeItem("game-item")
+}
+
+function clearAllvalues (){
+    const movesX=document.querySelector(".score")
+        movesX.firstElementChild.innerHTML="Moves:0"
+        movesX.lastElementChild.innerHTML="Time:0:0"
+        const sButton = document.querySelector("#start-btn")
+        sButton.classList.remove("btn-gray")
+        sButton.innerHTML = "Start"
+    timer.stop()
+    clearTimer()
+    moves=0
 }
