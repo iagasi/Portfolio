@@ -1,0 +1,32 @@
+.donate-header {
+  position: static;
+}
+.donate-hero{
+    overflow: hidden;
+}
+.hero__mainImg-donate {
+  width: 100%;
+  @media screen and (max-width: $brakePoint1222) {
+    height: 390px;
+    max-width: none;
+    width: 1261px;
+    object-fit: cover;
+  }
+  @media screen and (max-width: $brakePoint995) {
+    height: 335px;
+    width: 132%;
+  }
+  @media screen and (max-width: $brakePoint635) {
+    height: 187px;
+    width: 148%;
+  }
+
+
+}
+
+.donate-burger{
+    @media screen and (max-width: $brakePoint635) {
+      right: 7px;
+      top: 10px;
+      }
+}

@@ -1,0 +1,280 @@
+.footer {
+overflow: hidden;
+  position: relative;
+  background: #111115;
+  padding: 40px 0 50px 0;
+  @media screen and (max-width: $brakePoint1200) {
+    padding-left: 13px;
+  }
+  @media screen and (max-width: $brakePoint995) {
+    padding: 12px 0px 12px 0px;
+  }
+  @media screen and (max-width: $brakePoint600) {
+    padding: 12px 0px 12px 0px;
+  }
+  &__col3 {
+    display: flex;
+    gap: 30px;
+    @media screen and (max-width: $brakePoint1200) {
+      gap: 0;
+    }
+    @media screen and (max-width: $brakePoint995) {
+      padding: 0px 0px 12px 0px;
+      flex-direction: column;
+    }
+    @media screen and (max-width: $brakePoint600) {
+      gap: 37px;
+    }
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $brakePoint995) {
+      margin: 0;
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    @media screen and (max-width: $brakePoint600) {
+      flex-direction: column-reverse;
+      gap: 0;
+      height: fit-content;
+      justify-content: center;
+    }
+    & button {
+      margin-top: 68px;
+      @media screen and (max-width: $brakePoint995) {
+        margin-top: 86px;
+      }
+      @media screen and (max-width: $brakePoint600) {
+        margin: 30px auto;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: flex-end;
+
+    @media screen and (max-width: $brakePoint1200) {
+      margin-left: 0;
+    }
+    @media screen and (max-width: $brakePoint995) {
+      margin-top: 43px;
+      gap: 10px;
+    }
+    @media screen and (max-width: $brakePoint635) {
+      margin-top: 15px;
+      
+    }
+    & a:hover {
+      color: $mainBorderColor;
+    }
+
+    & .nav {
+      padding-bottom: 0;
+      gap: 58px;
+      width: 370px;
+      @media screen and (max-width: $brakePoint1200) {
+        padding-left: 0;
+        width: 333px;
+        gap: 48px;
+      }
+      @media screen and (max-width: $brakePoint995) {
+        gap: 37px;
+        width: 300px;
+      }
+      @media screen and (max-width: $brakePoint600) {
+        gap: 25px;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+  &__subscribtion {
+    display: grid;
+    color: white;
+
+    @media screen and (max-width: $brakePoint1200) {
+      padding-left: 0;
+      height: calc(100% - 40px - 50px);
+      position: absolute;
+      right: 0;
+      padding-right: 16px;
+      padding-left: 15px;
+    }
+    @media screen and (max-width: $brakePoint995) {
+      top: 76px;
+      right: 4px;
+    }
+    @media screen and (max-width: $brakePoint600) {
+      top: 14px;
+      right: 10px;
+      padding: 0;
+    }
+    & :nth-child(1) {
+      padding-right: 30px;
+    }
+  }
+}
+.social {
+  padding: 44px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @media screen and (max-width: $brakePoint995) {
+    height: 100%;
+    padding: 0;
+    gap: 20px;
+  }
+  @media screen and (max-width: $brakePoint600) {
+    height: 100%;
+    padding: 0;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 60px;
+  }
+}
+.social__item {
+  &-logo {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(196, 196, 196, 0.5);
+
+    display: grid;
+    place-content: center;
+  }
+
+  color: white;
+  display: flex;
+  place-items: center;
+  gap: 12px;
+  & p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    @media screen and (max-width: $brakePoint995) {
+      display: none;
+    }
+  }
+}
+
+.desighned-by {
+  font-style: normal;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 170%;
+  padding-right: 24px;
+
+  color: #bdbdbd;
+
+  align-self: flex-end;
+  justify-self: flex-end;
+  cursor: pointer;
+  @media screen and (max-width: $brakePoint1200) {
+    padding-right: 0;
+  }
+  @media screen and (max-width: $brakePoint995) {
+    padding-bottom: 12px;
+  }
+  @media screen and (max-width: $brakePoint600) {
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+    top: 30px;
+  }
+}
+.desighned-by:active {
+  text-decoration: underline;
+  color: $linkActive;
+}
+
+.email-input {
+  box-sizing: border-box;
+  font-size: 1.6em;
+  display: block;
+  width: 228px;
+  height: 42px;
+  background-color: inherit;
+  color: #bdbdbd;
+  border-radius: 2px;
+  border: 1px solid orange;
+  @media screen and (max-width: $brakePoint1200) {
+    width: 230px;
+    height: 42px;
+    padding-left: 8px;
+  }
+}
+.subscription__items {
+  padding-top: 14px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  // @media screen and (max-width: $brakePoint995) {
+  //   display: none;
+  // }
+}
+.footer__contacts .logo {
+  @media screen and (max-width: $brakePoint995) {
+    top: 24px;
+  }
+  @media screen and (max-width: $brakePoint600) {
+    top: 7px;
+    left: 21px;
+    border: 0px;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+
+    & h1 {
+      border: none;
+      width: fit-content;
+      text-align: center;
+    }
+  }
+}
+.footer__contacts .logo :hover {
+  color: $mainBorderColor;
+}
+
+//////hovers
+.social__item:hover {
+  color: $linkActive;
+  .social__item-logo {
+    background: $linkActive;
+  }
+}
+
+.social__item:active {
+  color: $linkActive;
+  .social__item-logo {
+    background: $linkActive;
+  }
+}
+
+.footer__contacts {
+  .logo__bamboo {
+    bottom: 13px;
+    @media screen and (max-width: $brakePoint995) {
+      top: 10px;
+    }
+    @media screen and (max-width: $brakePoint600) {
+      left: 76px;
+    }
+  }
+}
+.subscription__top {
+  @media screen and (max-width: $brakePoint995) {
+    display: none;
+  }
+}

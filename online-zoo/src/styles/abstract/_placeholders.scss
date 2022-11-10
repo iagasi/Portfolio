@@ -1,0 +1,50 @@
+%headerLink {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+}
+%headerLinkActive {
+  background-color: $headerActiveLink;
+}
+
+%headerLogo {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19.0145px;
+  line-height: 120%;
+  width: 82px;
+  height: 52px;
+
+  display: flex;
+  place-items: center;
+  text-align: center;
+
+  color: #ffffff;
+
+  border: 1.18841px solid #ffffff;
+
+}
+
+
+%feedBackground{
+
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);}
+
+  
+
+
+  %activeRangeButton{
+    .label__outlet {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid $rangeActiveColor;
+        & .inner__border {
+          border-radius: 50%;
+          height: 30px;
+          width: 30px;
+          border: 1px solid $rangeActiveColor;
+        }
+      }
+  }

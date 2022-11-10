@@ -1,0 +1,82 @@
+.card {
+  position: relative;
+  @media screen and (max-width: $brakePoint1200) {
+    width: 294px;
+    height: 354px;
+  }
+
+  @media screen and (max-width: $brakePoint995) {
+    box-sizing: border-box;
+    width: 285px;
+    height: 332px;
+
+    
+  }
+  & img {
+    z-index: 110;
+  }
+  overflow: hidden;
+  width: 366px;
+  height: 426px;
+  border: 1px solid $headerActiveLink;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 13px 0px 16px;
+  }
+  &__description {
+    & h3 {
+      font-weight: 500;
+      font-size: 1.6em;
+      line-height: 140%;
+    }
+    & p {
+      font-weight: 300;
+      font-size: 1.5em;
+    }
+  }
+}
+.card__bottom {
+  & img {
+    height: 38px;
+  }
+  height: 62px;
+  width: 92%;
+  position: absolute;
+  z-index: -1;
+  bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba($color: #726f6f, $alpha: 0.5);
+  // background-color: white;
+}
+
+.card__img {
+  @media screen and (max-width: $brakePoint1200) {
+    width: 100%;
+  }
+}
+
+.card:hover {
+  & .card__img {
+    
+    width: 376;
+    height: 376px;
+    @media screen and (max-width: $brakePoint995) {
+      width: 295px;
+    height: 290px;
+
+    }
+  }
+  .card__bottom {
+    transition: 1s;
+    bottom: -15px;
+    @media screen and (max-width: $brakePoint995) {
+      bottom: -25px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.container{
+   max-width:$containerWidth ;
+    margin: 0 auto;
+
+    @media  (max-width:$brakePoint1200){
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media (max-width: $brakePoint995) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media (max-width: $brakePoint600) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

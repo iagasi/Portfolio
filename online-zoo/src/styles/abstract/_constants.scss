@@ -1,0 +1,55 @@
+$headerActiveLink: #f9804b;
+$headerBackgroundColor: #000000;
+$headerFontColor: white;
+$containerWidth: 1160px;
+
+$buttonsMainColor: #f9804b;
+$mainBorderColor: #fe9013;
+$rangeActiveColor: #fe9013;
+$titleColor: #fe9013;
+$linkActive: #4B9200;
+.orange {
+  color: #fe9013;
+}
+$feedContentColor: rgba(253, 253, 255, 0.52);
+
+
+$brakePoint1500:1500px;
+$brakePoint1400:1400px;
+$brakePoint1300:1300px;
+$brakePoint1222:1222px;
+$brakePoint1200:1200px;
+$brakePoint995:995px;
+$brakePoint600:600px;
+$brakePoint635:635px;
+.link-active {
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+%link-active {
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+a {
+  cursor: pointer;
+ color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+a[tabindex]:focus {
+ @extend %link-active;
+  outline: none;
+}

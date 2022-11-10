@@ -1,0 +1,26 @@
+@import "./normalize.scss";
+@import "./reset.scss";
+@import "./abstract/constants.scss";
+@import "./abstract/fonts.scss";
+@import "./abstract/placeholders.scss";
+
+
+@import "./layout/container";
+
+@import "././base/inputs";
+@import "././base/buttons";
+@import "././base/card";
+@import "././base/text";
+
+@import "./components/mainPage/header.scss";
+@import "./components/mainPage/hero.scss";
+@import "./components//mainPage/animals.scss";
+@import "./components//mainPage/feed.scss";
+@import "./components//mainPage/testimonal.scss";
+@import "./components/reusable/footer"; 
+
+
+@import "./donate/components/donate-hero.scss";
+@import "./donate/components/help.scss";
+@import "./donate/components/range.scss";
+@import "./donate/components/donation-footer.scss"

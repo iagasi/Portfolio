@@ -1,0 +1,59 @@
+
+button{
+    border: none;
+    color: white;
+    letter-spacing: 0.7px;
+    font-size: 13px;
+}
+button:hover{
+  cursor: pointer;
+  background: #E47209;
+}
+button:active{
+  background: #4B9200;
+}
+.default-button {
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  border-radius: 25px;
+}
+
+.btn-sharp-edges{
+border-radius: 5px;
+}
+
+.round-button{
+  background-color: $buttonsMainColor;
+  width: 62px;
+  height: 62px;
+ display: grid;
+ place-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.8em;
+}
+
+.sumbmit-btn{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  width: 129px;
+  height: 42px;
+  color: #1e1f1d;
+  background: #F1F3F2;
+
+
+border: 1px solid #1b1b1a;
+border-radius: 5px;
+cursor: pointer;
+
+}
+
+.sumbmit-btn:hover{
+  color: #4B9200;
+  border: 1px solid #4B9200;
+  background: #F1F3F2;
+
+}
