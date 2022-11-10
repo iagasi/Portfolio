@@ -5,8 +5,9 @@ StoreFilterPanel: https://filter-d4a2b.web.app/
 
 Travel-Dom-Api: https://jadoos.web.app/
 <hr>
-Online-zoo:https://iagasi.github.io/Portfolio/zoo/
-Pages Main and Donate
+Online-zoo -Main:https://iagasi.github.io/Portfolio/zoo/
+<br>
+Online-zoo -Donate:https://iagasi.github.io/Portfolio/zoo/donate.html
 <hr>
 Gem-slider:https://iagasi.github.io/Portfolio/gem/
 <hr>
